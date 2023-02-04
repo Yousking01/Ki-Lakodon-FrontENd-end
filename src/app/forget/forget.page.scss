@@ -1,0 +1,100 @@
+ion-content{
+    --background: #FFFF;
+    margin: auto;
+}
+h1 {
+    position: relative;
+    top: 20%;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 42px;
+text-align: center;
+
+color: #000000;
+
+}
+
+.connexion{
+    position: relative;
+    top: 30%;
+    background: #29B6F6;
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 22px;
+margin: auto;
+display: flex;
+width: 60%;
+
+}
+
+ion-label{
+    position: relative;
+    top: 25%;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 27px;
+position: relative;
+left: 18px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+// margin: auto;
+}
+ion-input{
+    position: relative;
+    top: 25%;
+    margin: auto;
+    width: 90%;
+    background: #FEFCFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+.mpo{
+    position: relative;
+    top: 25%;
+    left: 40%;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+}
+// .compte{
+//     font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 500;
+// font-size: 16px;
+// line-height: 24px;
+// /* identical to box height */
+
+// text-align: center;
+
+// color: #616161;
+// }
+// .creer{
+//     position: relative;
+//     left: 38%;
+    
+//     top: -6%;
+//     font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 500;
+// font-size: 12px;
+// line-height: 24px;
+// /* identical to box height */
+
+// text-align: center;
+// color: #FFFFFF;
+// // top: -2px;
+// }

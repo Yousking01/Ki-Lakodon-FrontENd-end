@@ -1,0 +1,132 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
+  <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
+  <ion-icon class="search" name="search-outline"></ion-icon>
+  <ion-icon class="regle"name="options-outline"></ion-icon>
+  <!-- <ion-grid>
+    <ion-row class="row" > -->
+      <h1>Bienvenue a Ki-Lakodon</h1>
+      <ion-slides  [options]="slideOpts " style="height: 30%!important;   width: 100%!important;">
+        <ion-slide *ngFor="let listSite of ListeSite" >
+          <ion-card  class="card-slides"  size="4" routerLink="/tabs/profilsite">
+            <span>
+              <img class="imm" src="../../assets/{{listSite.image}}" alt="" routerLink="/tabs/profilsite">
+              <figcaption><a href="#" class="a" routerLink="/tabs/profilsite">{{listSite.url}}</a></figcaption>
+            </span>
+          </ion-card>
+           <ion-card class="card-slides">
+            <!-- <span>
+              <img class="imm" src="../../assets/logo.PNG" alt="">
+              <figcaption><a href="#"  class="a" >Malijet.com</a></figcaption>
+            </span> -->
+          </ion-card>
+        <!--  <ion-card class="card-slides">
+            <span>
+              <img class="imm" src="../../assets/logo.PNG" alt="">
+              <figcaption><a href="#"  class="a" >Malijet.com</a></figcaption>
+            </span>
+          </ion-card> -->
+          
+        </ion-slide>
+        
+        <!-- <ion-slide >
+          <ion-card class="card-slides" *ngFor="let listSite of ListeSite" size="4" routerLink="/tabs/profilsite">
+          <span>
+            <img class="imm" src="../../assets/{{listSite.image}}" alt="" routerLink="/tabs/profilsite">
+            <figcaption><a href="#" class="a" routerLink="/tabs/profilsite">{{listSite.url}}</a></figcaption>
+          </span>
+        </ion-card>
+          <ion-card class="card-slides" size="4">
+            <span>
+              <img  class="imm" src="../../assets/logo.PNG" alt="">
+              <figcaption><a href="#"  class="a" >Malijet.com</a></figcaption>
+            </span>
+             
+          </ion-card>
+          <span>
+            <img src="../../assets/logo.PNG" alt="">
+            <figcaption><a href="#" class="a" >Malijet.com</a></figcaption>
+          </span>
+          <ion-card class="card-slides">
+            <span>
+              <img class="imm" src="../../assets/logo.PNG" alt="">
+              <figcaption><a href="#" class="a" >Malijet.com</a></figcaption>
+            </span>
+          </ion-card> 
+          <ion-card class="card-slides">
+            <span>
+              <img class="imm" src="../../assets/logo.PNG" alt="">
+              <figcaption><a href="#" class="a" >Malijet.com</a></figcaption>
+            </span>
+          </ion-card>
+          
+        </ion-slide> -->
+        
+      </ion-slides>
+    <!-- </ion-row>
+  </ion-grid> -->
+  <!-- <ion-grid>
+    <ion-row>
+      
+    </ion-row>
+  </ion-grid> -->
+  <ion-card class="css aniamated bounceInUp" >
+    <ion-card class="card2">
+       <img src="../../assets/Kilakodon 2.png" alt="" class="imgcard">
+      <p class="cardtext">La meilleur plateforme pour publiés vos produits,<br>augmenter votre visibilité</p>
+      <ion-icon name="calendar-outline"></ion-icon>
+      <ion-icon name="location-outline"></ion-icon>
+      <ion-icon name="sync-outline"></ion-icon>
+    </ion-card>
+    <h1 class="text2">Les Services de Ki-Lakodon :</h1>
+    <ion-icon style="position: relative; top: -10%; left: 84%; " name="ellipsis-horizontal-outline"></ion-icon>
+    <ion-card class="card3" routerLink="/ajout-annonce">
+      <ion-card class="card4" routerLink="/ajout-annonce">
+        <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
+
+      </ion-card>
+      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
+      <a href="/ajout-annonce.module" class="annonce">Créer votre annonce</a>
+    </ion-card>
+
+    <ion-card class="card3" routerLink="/ajout-site">
+      <ion-card class="card4">
+        <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
+
+      </ion-card>
+      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
+      <a href="ajout-site.module" class="annonce">Ajouter un Site</a>
+    </ion-card>
+
+    <ion-card class="card3" routerLink="/listesite">
+      <ion-card class="card4"  routerLink="/listesite">
+        <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
+
+      </ion-card>
+      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
+      <a href="/listesite.module" class="annonce">Liste des Sites Populaire</a>
+    </ion-card>
+    
+    <ion-card class="card3">
+      <ion-card class="card4">
+        <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
+
+      </ion-card>
+      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
+      <a href="#" class="annonce">Dashboard</a>
+    </ion-card>
+  </ion-card>
+  
+  
+
+</ion-content>
+
+

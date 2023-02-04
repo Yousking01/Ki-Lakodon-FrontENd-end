@@ -1,0 +1,25 @@
+ion-tab-bar{
+    --background: #29B6F6;
+    border: 2px solid white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+ion-tabs{
+    background: white;
+}
+ion-label{
+    font-family: 'Poppins';
+    font-size: 10px;
+    align-items: center;
+    color: black;
+}
+ion-label:hover{
+    color: white;
+}
+ion-icon{
+    color: black;
+}
+ion-icon:hover{
+    color: white;
+}
+

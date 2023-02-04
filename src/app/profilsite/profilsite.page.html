@@ -1,0 +1,87 @@
+<ion-content>
+  
+
+  <div class="header">
+    <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
+    <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
+    <h1>Profil Site</h1>
+    <ion-icon class="icionUser" name="person-outline"></ion-icon>
+    <ion-icon class="iconNotif" name="notifications-outline"></ion-icon>
+
+    
+  </div>
+  <div class="flex" >
+    <div class="border-blue">
+      <div class="border-white">
+        <div class="img-box">
+          <img src="../../assets/{{ListeSitebyId.image}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-card class="CSS"  *ngFor="let listSite of ListeSite">
+    <br>
+    <h2 class="fana">{{ListeSitebyId.nomsitepopulaire}}</h2>
+    <br>
+    <p class="pp">{{ListeSitebyId.url}}</p>
+    
+      <ion-icon class="heart" name="heart-outline"></ion-icon>
+      <p class="jaime">J'aime</p>
+      <ion-badge >42k</ion-badge>
+
+      <ion-icon  class="views" name="eye-outline"></ion-icon>
+      <p class="view">Vues</p>
+      <ion-badge class="ion-badge">42k</ion-badge>
+      
+      <ion-icon class="add" name="add-circle-outline"></ion-icon>
+      <p class="abonne">Abonnement</p>
+      <ion-badge class="K">42k</ion-badge>
+      
+
+    <p class="ppp">Entreprise <br> personnel</p>
+    <p class="Capital">Capital</p>
+    <ion-badge class="somme">234.567$</ion-badge>
+      <p class="stat">Statistiques</p>
+
+      <ion-card class="cardstat">
+        <div style="display: block;">
+          <!-- <canvas baseChart width="200" height="200"
+            [type]="'line'"
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            [legend]="lineChartLegend">
+          </canvas> -->
+
+          <!-- [data]="barChartData"
+        [options]="barChartOptions"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)" -->
+          <canvas class="chart" baseChart
+          >
+          </canvas>
+<!-- <button mat-button mat-raised-button color="primary" class="buttonStat" (click)="randomize()">Derniers Statistiques</button> -->
+        </div>
+      </ion-card>
+      <p class="eee"  >Les différents annonce publiées notre site :</p>
+      <!-- <ion-card class="img1"> -->
+        <!-- <img  src="../../assets/" alt=""> -->
+      <!-- </ion-card> -->
+      
+      <img class="img1" *ngFor="let listeAnnonce of annonceSite" src="../../assets/{{listeAnnonce.image}}" alt="">
+      <!-- <img class="img3" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 2.png" alt="">
+      <img class="img4" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 3.png" alt="">
+      <img class="img5" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 4.png" alt="">
+      <img class="img6" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 5.png" alt="">
+      <img class="img7" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 6.png" alt="">
+     -->
+      <ion-card class="bottom">
+
+      </ion-card>
+    </ion-card>
+
+
+<!-- </div> -->
+</ion-content>
+
+

@@ -1,0 +1,344 @@
+ion-content {
+    width: calc(100% + 20px);
+    --padding-end: 20px !important;
+  }
+  
+  ion-content::part(scroll) {
+    margin-right: -20px;
+  }
+  ion-content{
+    --background:#29B6F6;
+  }
+  .ARROW{
+    color: #fff;
+    border: 0px solid #FFFFFF;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+  
+  position: absolute;
+  width: 23px;
+  
+  left: 5px;
+  top: 10px;
+  
+  }
+  .search{
+    color: #fff;
+    border: 0px solid #FFFFFF;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 23px;
+    top: 10px;
+   left: 210px;
+  }
+  .regle{
+    color: #fff;
+    border: 0px solid #FFFFFF;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+  
+    position: absolute;
+    width: 23px;
+    top: 10px;
+    left: 230px;
+  }
+  h1{
+    position: relative;
+  // width: 301px;
+  height: 14px;
+  // left: 63px;
+  top: 30px;
+  text-align: center;
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height, or 56% */
+  
+  
+  color: #FFFFFF;
+  }
+  .statistique{
+    color: #000000;
+    position: relative;
+    text-align: center;
+    top: -1%;
+}
+  .css{
+    --background: #fff;
+    height: 100%;
+    // position: relative;
+    // top: -4%;
+    border-radius: 50px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+    // margin-top: 15%;
+  }
+  .label{
+    position: relative;
+    left: 15px;
+    top: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+  }
+.input{
+    position: relative;
+    left: 15px;
+    top: 4%;
+    width: 85%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid;
+
+
+    color: #FFFFFF;
+}
+.label1{
+    position: relative;
+    top: -10px;
+    left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #29B6F6;
+}
+.input1{
+    top: -12px;
+    left: 20px;
+    width: 18%;
+    // top: 2%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    border-bottom: 1px solid #EEE6E6;
+}
+.input2{
+    left: 40%;
+    width: 18%;
+    top: -11.5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    border-bottom: 1px solid #EEE6E6;
+}
+.label2{
+    position: relative;
+    left: 38%;
+    width: 30%;
+    top: -67px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #29B6F6;
+}
+.input21{
+    left: 70%;
+    width: 18%;
+    top: -21%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    border-bottom: 1px solid #EEE6E6;
+
+}
+.label21{
+    position: relative;
+    left: 70%;
+    width: 30%;
+    top: -123px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #29B6F6;
+}
+.label3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    /* identical to box height, or 88% */
+    position: relative;
+    left: 15px;
+    top: -19%;
+
+    color: #29B6F6;
+}
+.input3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+    width: 85%;
+    left: 15px;
+    position: relative;
+    height: 10%;
+    top: -21%;
+
+
+    color: #544C4C;
+    border-bottom: 1px solid #EEE6E6;
+
+}
+.diffusion{
+    position: relative;
+    top: -20%;
+    left: 10px;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 160%;
+    /* or 22px */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    text-decoration-line: underline;
+
+    color: #29B6F6;
+
+
+}
+
+.dowload{
+    /* Drag and Drop Field */
+
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 29px 40px 41px;
+    gap: 10px;
+
+    position: relative;
+    width: 250px;
+    height: 30px;
+    // left: 54px;
+    // top: 645px;
+    top: -22%;
+
+    /* Input text */
+
+    border: 1px dashed #8E8E8E;
+}
+.up{
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    position: relative;
+    // top: -2%;
+    top: 10px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    color: #a7afc0;
+}
+.tele{
+    color: #a7afc0;
+}
+.bas{
+    position: relative;
+    top: -28%;
+    // left: 10px;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 160%;
+    /* or 22px */
+
+    // display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    // text-decoration-line: underline;
+
+    color: #29B6F6;
+}
+.ajouter{
+   
+position: absolute;
+width: 100px;
+height: 31px;
+left: 29px;
+// padding-left: 5px;
+top: 80%;
+color: #fff;
+//background: #29B6F6;
+box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+}
+.suprimer{
+    position: absolute;
+width: 100px;
+height: 31px;
+left: 145px;
+// padding-left: 5px;
+top: 80%;
+color: #fff;
+// background: #ff1e00;
+box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+}
+.icon2{
+    position: relative;
+    width: 24px;
+    height: 22px;
+    background: none;
+
+}
+.icon1{
+    position: relative;
+    width: 24px;
+    height: 22px;
+
+}
+ion-button{
+    --background :#29B6F6;
+}

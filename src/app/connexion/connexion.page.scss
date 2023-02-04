@@ -1,0 +1,156 @@
+ion-content {
+    width: calc(100% + 20px);
+    --padding-end: 20px !important;
+  }
+  
+  ion-content::part(scroll) {
+    margin-right: -20px;
+  }
+.tout{
+    --background: #fff;
+    margin: auto;
+}
+img{
+    display: flex;
+    margin: auto;
+    width: 40%;
+    height: 20%;
+    margin-top: 15px;
+}
+h1 {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 42px;
+text-align: center;
+margin-top: -15%;
+
+color: #000;
+
+}
+.Connectez{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+text-align: center;
+position: relative;
+top: -5%;
+margin: auto;
+
+color: #000;
+}
+ion-label{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 27px;
+position: relative;
+left: 10px;
+/* identical to box height */
+
+text-align: center;
+position: relative;
+top: -3%;
+margin: auto;
+color: #000;
+// margin: auto;
+}
+ion-input{
+    margin: auto;
+    width: 90%;
+    background: #FEFCFC;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    position: relative;
+top: -3%;
+margin-left: 4px;
+}
+.connexion{
+    background: #29B6F6;
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+border-radius: 22px;
+margin: auto;
+display: flex;
+width: 60%;
+
+}
+.mpo{
+    position: relative;
+    left: 38%;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: center;
+
+color: #EA4335;
+
+}
+.compte{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: center;
+
+color: #616161;
+}
+.creer{
+    position: relative;
+    left: 38%;
+    // top: -10%;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: center;
+color: #000;
+top: -2px;
+}
+ion-icon{
+    color: #29B6F6;
+    // margin: auto;
+    // display: flex;
+}
+.google{
+    // margin: auto;
+    // display: flex;
+    justify-content: start;
+    position: relative;
+    left: 25%;
+    width: 10%;
+    height: 10%;
+}
+.facebook{
+    position: relative;
+    left: 35%;
+    margin: auto;
+    justify-content: center;
+    width: 10%;
+    height: 10%;
+    // display: flex;
+}
+.github{
+    position: relative;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+    //  
+    justify-content: end;
+    // display: flex;
+}

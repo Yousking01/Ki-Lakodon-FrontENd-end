@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 
 const TOKEN_KEY = 'auth-token';
@@ -10,7 +11,7 @@ const USER_KEY = 'auth-user';
 })
 export class TokenStorageService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private navCtrl: NavController,) { }
 
   signOut() {
     window.sessionStorage.clear();
@@ -26,10 +27,30 @@ export class TokenStorageService {
     return !! token
   }
 
-  clearToken(): void{
-    localStorage.removeItem('token')
-    this.router.navigate(['/'])
+  checkConnection(): boolean{
+    const user = window.sessionStorage.getItem(USER_KEY)
+    // console.log(token)
+   if(user){
+    return true
+   }else{
+    return false;
+   }
   }
+
+  clearToken(): void{
+    localStorage.removeItem('token'),
+    window.sessionStorage.clear(),
+    window.location.reload();
+    // this.navCtrl.navigateRoot([{clearHistory: true}]);
+      this.router.navigate(['/']);
+    
+    
+  }
+  // reloadPage() {
+  //   this.router.navigateByUrl('/tabs/home', { skipLocationChange: true }).then(() => {
+  //     this.router.navigate(['']);
+  //   });
+  // }
 
   // clearTokenExpired(): void{
   //   localStorage.removeItem('token')
@@ -52,14 +73,17 @@ export class TokenStorageService {
   //   return sessionStorage.getItem(TOKEN_KEY);
   // }
 
-  // public saveUser(): any {
-  //   window.sessionStorage.removeItem(USER_KEY);
-  //   window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
-  // }
+ 
 
   // public getUser() {
   //   return JSON.parse(sessionStorage.getItem(USER_KEY));
   // }
+
+ public saveUser(user:any): void {
+    window.sessionStorage.removeItem(USER_KEY);
+    window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
+  }
+
   public recupererUser(): any {
     const user = window.sessionStorage.getItem(USER_KEY);
     if (user) {

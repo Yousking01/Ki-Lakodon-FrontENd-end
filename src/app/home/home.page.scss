@@ -1,3 +1,181 @@
+ion-header{
+   ion-icon {
+    font-size: 35px;
+    position: relative;
+    margin-right: 150px;
+    color: #aaa;
+    z-index: 111;
+    
+   }
+   #notifications-badge-msg{
+    background-color: rgb(67, 7, 233);
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    color: #FFFFFF;
+    z-index: 111;
+   }
+   .imagee{
+    margin-top: 0px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 5px;
+   }
+}
+///////////ANIMATION SLIDE
+// Full tutorial coming soon!
+
+.card {
+  
+  top: 5px;
+    /* padding: 5px; */
+    margin-top: 15px;
+    --card-gradient: rgba(0, 0, 0, 0.8);
+    --card-gradient: #5e9ad9, #e271ad;
+    --card-blend-mode: overlay;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgb(0 0 0 / 45%);
+    padding-bottom: 1rem;
+    background-image: linear-gradient(var(--card-gradient), white max(9.5rem, 27vh));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  overflow: hidden;
+
+  .imgcardd {
+    border-radius: 0.5rem 0.5rem 0 0;
+    width: 100%;
+    object-fit: cover;
+    // height: max(10rem, 25vh);
+    max-height: max(10rem, 30vh);
+    aspect-ratio: 4/3;
+    mix-blend-mode: var(--card-blend-mode);
+    // filter: grayscale(100);
+
+    ~ * {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus-within {
+    --card-gradient: #24a9d5 max(8.5rem, 20vh);
+  }
+}
+
+/* Additional demo display styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  color: #444;
+  background-color: #e1faf1;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.card a {
+  color: inherit;
+}
+
+.card-wrapper {
+  display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 80%;
+    list-style: none;
+    padding: 0;
+    /* margin: 0; */
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+    grid-gap: 1.5rem;
+    /* max-width: 35vw; */
+    /* width: 90ch; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+// @import '~swiper/scss';
+// @import '~@ionic/angular/css/ionic-swiper';
+
+.islide{
+  border-bottom-left-radius: 65px;
+    width: 100%;
+    height: 30%;
+    border-top-right-radius: 90px;
+}
+.card11{
+  width: 30%;
+    height: 60%;
+    --background: #00fffc 45%;
+    height: 20vh;
+
+
+}
+.card12{
+  width: 30%;
+    height: 60%;
+    --background: #fb00ff2e 45%;
+    height: 15vh;
+}
+.card13{
+  margin-top: 16px;
+  width: 30%;
+  height: 60%;
+  --background: #fffc0066 100%;
+  height: 19vh;
+}
+.annonceimg{
+  margin: auto;
+    display: flex;
+    margin-bottom: 10px;
+    width: 60%;
+    height: 50%;
+}
+.card14{
+  width: 30%;
+    margin-top: -12px;
+    height: 60%;
+    --background: #fff;
+    height: 20vh;
+}
+// .div1{
+//     margin-top: -20px;
+//     background-color: #000;
+//     height: 30%;
+//     width: 100%;
+// }
+.ccc {
+  margin-top: -50px;
+  
+}
+
 ion-content {
     width: calc(100% + 20px);
     --padding-end: 20px !important;
@@ -69,12 +247,16 @@ ion-content {
     left: 230px;
   }
   img{
-    width: 60%;
+   // width: 60%;
     height: 50%;
     position: relative;
     margin: auto;
-    margin-top: 16%;
+    margin-top: 15%;
     
+  }
+  .div22{
+    margin-top: -30px;
+
   }
   // ion-card{
   //   position: relative;
@@ -109,7 +291,7 @@ ion-content {
   //   // --background-color:red;
   // }
   ion-content{
-    --background:#29B6F6;
+    --background:#a6d4e97e;
   }
   .css{
     --background: #fff;
@@ -152,16 +334,20 @@ ion-content {
   color: #FFFFFF;
   }
   .card2{
-    // width: 90%;
+    margin-left: 20px;
     height: 100px;
-    position: relative;
-    top: -2%;
+    /* position: relative; */
+    /* top: -2%; */
     --background: #ffffff;
-  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.25);
-  // border-radius: 30px;
-  border: 1px dashed #29B6F6;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 30px;
+    box-shadow: 0px 2px 2px 2px rgb(0 0 0 / 25%);
+    border: 1px dashed #29B6F6;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
   .imgcard{
     width: 35%;
@@ -172,43 +358,99 @@ ion-content {
     left: 5px;
   }
   .cardtext{
-    font-family: 'Poppins';
+    margin-left: 80px;
+    margin-top: -115px;
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    /* or 108% */
-    
     text-align: center;
-    
     color: #000000;
-    position: relative;
-  width: 150px;
-  height: 46px;
-  left: 70px;
-  top:-120px;
+    /* position: relative; */
+    width: 150px;
+    height: 46px;
+    /* left: 70px; */
+    /* top: -120px; */
+    align-items: end;
+    display: flex;
+    justify-content: flex-end;
    
+  }
+  .macard{
+    border-radius: 15px;
+    display: flex;
+    margin-top: 60px;
+    width: 90%;
+    height: 110px;
+    margin-left: 12px;
+    margin-right: 12px;
+    box-shadow: 1px 1px 1px 1px;
+    justify-content: center;
+
+  }
+  .cmgimage{
+    width: 80px;
+    background-color: aliceblue;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+  }
+  .commentaire{
+    // transform: translateY(0);
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    font-family: Poppins;
+    font-size: 11px;
+    text-align: center;
+    margin: auto;
+    color: cornflowerblue;
+    font-style: italic;
+  }
+  .cardimg{
+    border-radius: 50%;
+    width: 30%;
+    background-color: #FFFFFF;
+    height: 10vh;
+    display: flex;
+    margin: auto;
+    margin-top: -40px;
+  }
+  .header{
+    background-color: rgb(55 136 199 / 80%);
+  }
+  .imgRond{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+
   }
   ion-icon{
     margin: auto;
     position: relative;
     left: 45%;
     padding: 8px;
-    top: -125px;
+    //top: -125px;
     // color: #000000;
   }
   .text2{
-    
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  
   color: #29B6F6;
-  position: relative;
-  top: -5%;
-  left: -25px;
+  text-align: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #29B6F6;
+    /* position: relative; */
+    /* top: -5%; */
+    /* left: -25px; */
+    margin-bottom: 90px;
+    margin-top: -45px;
   }
   .card3{
     display: flex;
@@ -217,7 +459,7 @@ ion-content {
   padding-top: 40px;
   justify-content: space-between;
   gap: 20px;
-
+  margin-left: 20px;
   
   position: relative;
   // width: 348px;
@@ -230,29 +472,22 @@ ion-content {
   border-bottom-left-radius: 20px;
   }
   .card4{
+    margin-left: 5px;
+    margin-top: -12%;
     --background: #29B6F6;
-    // width: 25%;
-    // height: 100px;
-    // position: relative;
-    top: -5%;
-    // left: -6%;
-    // border: 15px;
-    position: absolute;
+    /* top: -5%; */
+    /* position: absolute; */
     width: 40px;
     height: 40px;
-    // padding-top: -35%;
     justify-content: space-between;
     border-top-left-radius: 75px;
-  border-bottom-left-radius: 75px;
-  // left: 0px;
-  // top: 0px;
+    border-bottom-left-radius: 75px;
     
   }
   .annonce{
-    text-align: center; 
-    position: absolute; 
-    left: 55px; 
-    top: 20px;
+    text-align: center;
+    position: absolute;
+    font-size: 12px;
   }
   .point{
     position: relative;  

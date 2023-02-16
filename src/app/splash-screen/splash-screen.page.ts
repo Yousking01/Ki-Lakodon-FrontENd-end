@@ -14,7 +14,7 @@ screen: any;
     setTimeout(()=>{
       this.router.navigateByUrl('/tabs/home');
     },
-    1000);
+    3000);
   }
   
 

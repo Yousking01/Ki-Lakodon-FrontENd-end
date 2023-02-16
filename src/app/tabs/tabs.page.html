@@ -1,19 +1,25 @@
+
+
 <ion-tabs>
 
   <ion-tab-bar slot="bottom">
 
+
+  <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Accueil</ion-label>
+      </ion-tab-button>
+
+
     <ion-tab-button tab="dashboard">
       <ion-icon name="analytics"></ion-icon>
-      <ion-label>Dashboard</ion-label>
+      <ion-label>Analyse</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="home">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Accueil</ion-label>
-    </ion-tab-button>
+    
 
-    <ion-tab-button tab="profilsite">
-      <ion-icon name="person-circle-outline"></ion-icon>
+    <ion-tab-button tab="profilsite/:id">
+      <ion-icon name="desktop"></ion-icon>
       <ion-label>Site_web</ion-label>
     </ion-tab-button>
    
@@ -21,6 +27,13 @@
       <ion-icon name="person-circle-outline"></ion-icon>
       <ion-label>Annonceurs</ion-label>
     </ion-tab-button>
+
+    <ion-buttons>
+      <ion-button (click)="opennotif()" >
+        <ion-icon class="not" style="width:30px;height:40px;" name="notifications-outline"></ion-icon>
+        <ion-badge>3</ion-badge>
+      </ion-button>
+    </ion-buttons>
 
   </ion-tab-bar>
 

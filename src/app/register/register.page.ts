@@ -12,4 +12,9 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
+
 }

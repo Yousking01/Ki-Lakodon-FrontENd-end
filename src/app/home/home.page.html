@@ -1,20 +1,26 @@
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="search-chef" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="--text-color: #000;">
+      Accueil
     </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="">
   </ion-toolbar>
-</ion-header> -->
-
+</ion-header>
+ <!-- [scrollX]="true" [scrollY]="true" -->
 <ion-content [fullscreen]="true">
+  <div style="width: 100%;overflow: scroll !important;;">
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
-  <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
-  <ion-icon class="search" name="search-outline"></ion-icon>
-  <ion-icon class="regle"name="options-outline"></ion-icon>
+  <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
+  <!-- <ion-icon class="search" name="search-outline"></ion-icon> -->
+  <!-- <ion-icon class="regle"name="options-outline"></ion-icon> -->
   <!-- <ion-grid>
     <ion-row class="row" > -->
-      <h1>Bienvenue a Ki-Lakodon</h1>
-      <ion-slides  [options]="slideOpts " style="height: 30%!important;   width: 100%!important;">
+      <!-- <ion-slides  [options]="slideOpts " style="height: 30%!important;   width: 100%!important;">
         <ion-slide *ngFor="let listSite of ListeSite" >
           <ion-card  class="card-slides"  size="4" routerLink="/tabs/profilsite">
             <span>
@@ -22,12 +28,12 @@
               <figcaption><a href="#" class="a" routerLink="/tabs/profilsite">{{listSite.url}}</a></figcaption>
             </span>
           </ion-card>
-           <ion-card class="card-slides">
+           <ion-card class="card-slides"> -->
             <!-- <span>
               <img class="imm" src="../../assets/logo.PNG" alt="">
               <figcaption><a href="#"  class="a" >Malijet.com</a></figcaption>
             </span> -->
-          </ion-card>
+          <!-- </ion-card> -->
         <!--  <ion-card class="card-slides">
             <span>
               <img class="imm" src="../../assets/logo.PNG" alt="">
@@ -35,7 +41,7 @@
             </span>
           </ion-card> -->
           
-        </ion-slide>
+        <!-- </ion-slide> -->
         
         <!-- <ion-slide >
           <ion-card class="card-slides" *ngFor="let listSite of ListeSite" size="4" routerLink="/tabs/profilsite">
@@ -70,7 +76,7 @@
           
         </ion-slide> -->
         
-      </ion-slides>
+      <!-- </ion-slides> -->
     <!-- </ion-row>
   </ion-grid> -->
   <!-- <ion-grid>
@@ -78,53 +84,192 @@
       
     </ion-row>
   </ion-grid> -->
-  <ion-card class="css aniamated bounceInUp" >
-    <ion-card class="card2">
+  <!-- <div class="div1"> -->
+    <!-- <h1>Bienvenue a Ki-Lakodon</h1> -->
+    <!-- <ion-slides > -->
+      <div style="width: 100% !important;" class="ccc">
+    <ion-slides  [options]="slideOpts " style="height: 10%!important; width: 100%!important;">
+
+      <ion-slide style="width: 100% !important;">
+        <img class="islide" src="/assets/accueil/image.png" alt="">
+      </ion-slide>
+
+      <ion-slide style="width: 100% !important;">
+        <img class="islide" src="../../assets/accueil/1614275613-publicite-youtube.png" alt="">
+      </ion-slide>
+
+      <ion-slide style="width: 100% !important;">
+        <img class="islide" src="../../assets/accueil/2131169417_1665811819.png" alt="">
+      </ion-slide>
+
+      <ion-slide style="width: 100% !important;">
+        <img class="islide" src="../../assets/accueil/img5slide.jpeg" alt="">
+      </ion-slide>
+
+      <ion-slide style="width: 100% !important;">
+        <img class="islide" src="../../assets/accueil/img7slide.jpg" alt="">
+      </ion-slide>
+
+      <ion-slide style="width: 100% !important;">
+        <img class="islide" src="../../assets/accueil/img9slide.jpg" alt="">
+      </ion-slide>
+
+    </ion-slides>
+  </div>
+  <!-- </div> -->
+  <div style="width: 100% !important;margin-top: -14px; display: flex; justify-content: center;">
+    <ion-card class="card11" *ngIf="annonceurR || admin" routerLink="/ajout-annonce" >
+      <img class="annonceimg"  src="../../assets/accueil/annoce.png" alt=""> 
+       <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
+       <a href="/ajout-annonce.module" class="annonce">Créer votre annonce</a>
+    </ion-card>
+
+    <ion-card class="card12"  *ngIf="annonceurR || admin" routerLink="/listeannonce">
+      <img style="display: flex;
+      margin-bottom: 10px;
+      width: 70%;
+      height: 70%;" src="../../assets/accueil/services-single-5IOS-1.jpg" alt=""> 
+      <a href="listeannonce.module" class="annonce">Liste Annonces</a>
+    </ion-card>
+  </div>
+  <div class="div22" style="width: 100% !important; display: flex; justify-content: center;">
+  <ion-card class="card13" *ngIf="SitewebR || admin" routerLink="/listesite" >
+    <img style="display: flex;
+    margin-bottom: 10px;
+    width: 70%;
+    height: 70%;" src="../../assets/accueil/growing-bar-graph-flat-icon-vector-20690193.jpg" alt=""> 
+    <a href="listesite.module" class="annonce">Liste Site_Web</a>
+  </ion-card>
+
+  <ion-card class="card14" *ngIf="admin || SitewebR" routerLink="/ajout-site" >
+    <img class="annonceimg"  src="../../assets/accueil/site.png" alt=""> 
+    <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
+      <a href="ajout-site.module" class="annonce">Ajouter un Site</a>
+  </ion-card>
+  </div>
+  <div style="width: 100% !important;">
+    <ion-card class="macard">
+      <img class="cmgimage" src="../../assets/accueil/cmg-marketing-banner-rev-01.png" alt="">
+      <p class="commentaire">Venez vous rendre vos produits populaire et vos annonces sur les meilleures plateforme à travers le monde entier.
+      <br>  Oui c'est possible avec Ki-Lakodon !!!
+      </p>
+    </ion-card>
+    <ion-card class="cardimg">
+      <!-- <p>jjjjjjjjjjjjjjjjj</p> -->
+    <img class="imgRond" src="../../assets/Ki-lakodon 1.png" alt="">
+    </ion-card>
+  </div>
+  <ul class="card-wrapper">
+    <li class="card" style="height: 80%;
+    width: 90%;">
+      <img class="imgcardd" src='../../assets/accueil/img4slide.jpg' alt=''>
+      <!-- <h3><a href="">A Super Wonderful Headline</a></h3> -->
+      <p>AW yé Na aw La-Kodon</p>
+    </li>
+    <br>
+
+    <li class="card" style="height: 80%;
+    width: 90%;">
+      <img class="imgcardd" src='../../assets/accueil/ia_recherche.jpg' alt=''>
+      <!-- <h3><a href="">A Super Wonderful Headline</a></h3> -->
+      <p>Venez faire la pub sur chez les meilleures</p>
+    </li>
+    <!-- <li class="card">
+      <img class="imgcardd" src='../../assets/accueil/img7slide.jpg' alt=''>
+      <h3><a href="">Positively Terrific Title</a></h3>
+      <p>Lorem ipsum sit dolor amit</p>
+    </li> -->
+  </ul>
+  
+
+  <div style="width: 90% !important; margin-top: 25px; margin-bottom: 10px;margin-left: 10px; margin-right: 10px;" >
+    <!-- <swiper effect="fade">
+      <ng-template swiperSlide>Slide 1</ng-template>
+      <ng-template swiperSlide>Slide 2</ng-template>
+      <ng-template swiperSlide>Slide 3</ng-template>
+    </swiper> -->
+
+    <ion-slides style="border-radius: 20px;" [options]="slideOpts1" pagination="true" [scrollbar]="true" zoom="true">
+     
+      <ion-slide>
+        <ion-img src="../../assets/accueil/img10slide.jpg" ></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="../../assets/accueil/img1slide.jpg" ></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="../../assets/accueil/img2slides.jpg" ></ion-img>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-img src="../../assets/accueil/img4slide.jpg" ></ion-img>
+      </ion-slide>
+
+    </ion-slides>
+    
+
+  </div>
+  
+  <!-- <ion-card class="css aniamated bounceInUp" >  -->
+    <!-- <ion-card class="card2">
        <img src="../../assets/Kilakodon 2.png" alt="" class="imgcard">
       <p class="cardtext">La meilleur plateforme pour publiés vos produits,<br>augmenter votre visibilité</p>
       <ion-icon name="calendar-outline"></ion-icon>
       <ion-icon name="location-outline"></ion-icon>
       <ion-icon name="sync-outline"></ion-icon>
-    </ion-card>
-    <h1 class="text2">Les Services de Ki-Lakodon :</h1>
-    <ion-icon style="position: relative; top: -10%; left: 84%; " name="ellipsis-horizontal-outline"></ion-icon>
-    <ion-card class="card3" routerLink="/ajout-annonce">
+    </ion-card> -->
+    <!-- <h1 class="text2">Les Services de Ki-Lakodon :</h1>  <br> -->
+    <!-- <ion-icon style="position: relative; top: -10%; left: 84%; " name="ellipsis-horizontal-outline"></ion-icon> -->
+    <!-- <ion-card class="card3" *ngIf="annonceurR || admin" routerLink="/ajout-annonce">
       <ion-card class="card4" routerLink="/ajout-annonce">
         <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
 
-      </ion-card>
-      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
-      <a href="/ajout-annonce.module" class="annonce">Créer votre annonce</a>
-    </ion-card>
+      </ion-card> -->
+      <!-- <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon> -->
+      <!-- <a href="/ajout-annonce.module" class="annonce">Créer votre annonce</a>
+    </ion-card> -->
 
-    <ion-card class="card3" routerLink="/ajout-site">
+    <!-- <ion-card class="card3" *ngIf="admin || SitewebR" routerLink="/ajout-site">
       <ion-card class="card4">
+
         <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
 
-      </ion-card>
-      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
-      <a href="ajout-site.module" class="annonce">Ajouter un Site</a>
-    </ion-card>
+      </ion-card> -->
+      <!-- <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon> -->
+      <!-- <a href="ajout-site.module" class="annonce">Ajouter un Site</a>
+    </ion-card> -->
 
-    <ion-card class="card3" routerLink="/listesite">
+    <!-- <ion-card class="card3" *ngIf="SitewebR || admin" routerLink="/listesite">
       <ion-card class="card4"  routerLink="/listesite">
         <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
 
-      </ion-card>
-      <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
-      <a href="/listesite.module" class="annonce">Liste des Sites Populaire</a>
-    </ion-card>
+      </ion-card> -->
+      <!-- <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon> -->
+      <!-- <a href="/listesite.module" class="annonce">Liste des Sites Populaire</a>
+    </ion-card> -->
     
-    <ion-card class="card3">
+    <!-- <ion-card class="card3" *ngIf="annonceurR || admin" routerLink="/listeannonce">
+      <ion-card class="card4" routerLink="/listeannonce">
+        <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
+
+      </ion-card> -->
+      <!-- <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon> -->
+      <!-- <a href="#" class="annonce">Liste Annonces</a>
+    </ion-card> -->
+
+    <!-- <ion-card class="card3">
       <ion-card class="card4">
         <img style="display: flex; position: relative; top: 5px; " src="../../assets/LogoKilakodon 3.png" alt=""> 
 
       </ion-card>
       <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
-      <a href="#" class="annonce">Dashboard</a>
-    </ion-card>
-  </ion-card>
-  
+      <a href="#" class="annonce">Liste Annonces</a>
+    </ion-card> -->
+  <!-- </ion-card>  -->
+
+</div>
   
 
 </ion-content>

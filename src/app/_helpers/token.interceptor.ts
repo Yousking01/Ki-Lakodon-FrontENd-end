@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { catchError, from, throwError } from "rxjs";
+import { from, throwError } from "rxjs";
+import { catchError } from 'rxjs/operators';
 import { 
     HttpRequest,
     HttpHandler,

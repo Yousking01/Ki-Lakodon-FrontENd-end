@@ -9,9 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { authInterceptorProviders } from './_helpers/auth.interceptor';
+// import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { NotificationComponent } from './notification/notification.component';
 import { TokenInterceptorProvider } from './_helpers/token.interceptor';
+// import { EmailComposer } from '@ionic-native/email-composer';
+import { Camera } from '@awesome-cordova-plugins/camera/ngx';
+// import { Camera, CameraResultType } from '@capacitor/camera';
+import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
+
 
 @NgModule({
   declarations: [AppComponent,NotificationComponent],
@@ -20,9 +25,14 @@ import { TokenInterceptorProvider } from './_helpers/token.interceptor';
       AppRoutingModule,
       FormsModule,
       HttpClientModule,
+     
       // NgChartsModule
     ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy  }, TokenInterceptorProvider],
+  providers: [
+    Camera,
+    EmailComposer,  
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy  },
+     TokenInterceptorProvider, ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

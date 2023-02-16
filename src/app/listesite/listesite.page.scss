@@ -68,31 +68,25 @@ ion-content {
     left: 230px;
   }
   .titree{
+    margin-left: 15px;
     width: 32px;
     height: 30px;
-
-    /* Bold/Bold 14 */
-
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 214% */
-
-
-    /* Gray Blue/Grey Blue 70 */
-
     color: #29B6F6;
-
+    /* flex: none; */
+    /* order: 0; */
+    /* flex-grow: 0; */
+    position: relative;
+    /* left: 15px; */
+    margin-top: 10px;
 
     /* Inside auto layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    position: relative;
-    left: 15px;
+    
   }
   .ajouter{
     // display: flex;
@@ -137,23 +131,19 @@ ion-content {
 }
 .card3{
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-
-    position: relative;
-    width: 124px;
-    height: 30px;
-    left: calc(50% - 124px/2 - 42px);
-    // top: -10px;
-    margin: auto;
-    // left: -20px;
-
-    /* Shadows/Gray Blue 30/3%/5b */
-
-    filter: drop-shadow(0px 2px 5px rgba(38, 51, 77, 0.03));
-    border-radius: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  /* position: relative; */
+  width: 110px;
+  height: 27px;
+  /* left: calc(50% - 62px - 42px); */
+  margin: auto;
+  filter: drop-shadow(0px 2px 5px rgba(38, 51, 77, 0.03));
+  border-radius: 10px;
+  align-items: center;
 }
 .card4{
     display: flex;
@@ -175,67 +165,71 @@ ion-icon{
     margin: auto;
 }
 .liste{
-    position: relative;
-    width: 220px;
-    height: 33px;
-    // left: 90px;
-    top: 85px;
-    text-align: center;
-    margin: auto;
-    justify-content: center;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 184%;
-    /* or 33px */
-
-    text-decoration-line: underline;
-
-    color: #29B6F6;
+  align-items: center;
+  /* top: 46px; */
+  display: flex;
+  margin-top: 60px;
+  /* position: relative; */
+  width: 220px;
+  height: 33px;
+  text-align: center;
+  /* margin: auto; */
+  justify-content: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 184%;
+  text-decoration-line: underline;
+  color: #29B6F6;
 }
 .card5{
-    position: relative;
-
-    margin: auto;
-    width: 85%;
-    justify-content: center;
-    display: flex;
-    left: -10px;
-    height: 15%;
-    top: 60px;
-
-
-    background: #FAFBFC;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.33);
-    border-radius: 0px 30px;
+  // margin-top: 90px;
+  margin-left: 15px;
+  align-items: center;
+  /* position: relative; */
+  /* margin: auto; */
+  width: 85%;
+  /* justify-content: center; */
+  display: flex;
+  /* left: -10px; */
+  height: 15%;
+  /* top: 60px; */
+  background: #FAFBFC;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 33%);
+  border-radius: 0px 30px;
+  margin-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .nomsite{
-    position: relative;
-    width: 74px;
-    height: 26px;
-    left: -60px;
-    // top: 271px;
-    justify-content: center;
-    margin: auto;
+  margin-left: 20px;
+  /* position: relative; */
+  width: 74px;
+  height: 26px;
+  /* left: -60px; */
+  /* justify-content: center; */
+  /* margin: auto; */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 184%;
+  color: #29B6F6;
+  align-items: center;
+  display: flex;
 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 184%;
-    /* or 33px */
-
-
-    color: #29B6F6;
 
 }
 .image{
-    position: absolute;
-    width: 60%;
-    height: 60%;
-    left: 40%;
-    top: 20px;
-    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.33));
+  margin-left: 20px;
+  display: flex;
+  /* position: absolute; */
+  width: 100%;
+  height: 70%;
+  /* left: 40%; */
+  /* top: 20px; */
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.33));
+  justify-content: flex-end;
+  align-items: center;
 }

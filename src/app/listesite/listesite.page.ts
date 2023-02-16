@@ -22,4 +22,10 @@ export class ListesitePage implements OnInit {
 
   }
 
+
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
+
 }

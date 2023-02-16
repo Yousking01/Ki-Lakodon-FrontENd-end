@@ -22,4 +22,27 @@ ion-icon{
 ion-icon:hover{
     color: white;
 }
-
+ion-badge{
+    position: absolute;
+    font-size: 8px;
+    right: -3px;
+    top: 15px;
+}
+// ion-button {
+//     width: 40px;
+//     height: 40px;
+//     position: relative;
+//     overflow: visible !important;
+//     color: #6A9A8B;
+// }
+// .notiff ion-button {
+//     align-items: flex-end;
+//     float: right;
+// }
+// .not{
+//     margin-top: 20px;
+// }
+// ion-buttons.notiff.sc-ion-buttons-md-h.sc-ion-buttons-md-s.md.hydrated {
+//     float: right;
+//     margin-left: 80%;
+// }

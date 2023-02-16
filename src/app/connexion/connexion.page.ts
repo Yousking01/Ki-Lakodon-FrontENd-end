@@ -54,6 +54,7 @@ export class ConnexionPage implements OnInit {
     this.authService.login(this.form).subscribe(
       data => {console.log(data.accessToken)
         localStorage.setItem('token', data.accessToken)
+        this.tokenStorage.saveUser(data)
         this.tokenStorage.saveToken(data.accessToken)
           
       },
@@ -78,7 +79,8 @@ export class ConnexionPage implements OnInit {
     // );
   }
 
-  reloadPage() {
+   //reload Page
+   reloadPage() {
     window.location.reload();
   }
 

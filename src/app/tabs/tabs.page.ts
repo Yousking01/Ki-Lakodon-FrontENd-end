@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { NotificationComponent } from '../notification/notification.component';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +9,16 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(private pvrCtlr: PopoverController) {}
+  async opennotif() {
+    const popup = await this.pvrCtlr.create({
+      component: NotificationComponent,
+    });
+    popup.present();
+  }
 
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
 }

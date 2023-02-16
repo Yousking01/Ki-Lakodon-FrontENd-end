@@ -7,8 +7,13 @@ ion-content {
     margin-right: -20px;
   }
 .tout{
-    --background: #fff;
+    --background: #f5f5f3;
     margin: auto;
+}
+#form{
+    margin-top: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 img{
     display: flex;
@@ -16,6 +21,14 @@ img{
     width: 40%;
     height: 20%;
     margin-top: 15px;
+}
+#header{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
 }
 h1 {
     font-family: 'Poppins';
@@ -44,50 +57,75 @@ margin: auto;
 
 color: #000;
 }
-ion-label{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 27px;
-position: relative;
-left: 10px;
-/* identical to box height */
+// ion-label{
+//     font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 500;
+// font-size: 14px;
+// line-height: 27px;
+// position: relative;
+// left: 10px;
+// /* identical to box height */
 
-text-align: center;
-position: relative;
-top: -3%;
-margin: auto;
-color: #000;
+// text-align: center;
+// position: relative;
+// top: -3%;
 // margin: auto;
-}
+// color: #000;
+// // margin: auto;
+// }
 ion-input{
+//     margin: auto;
+//     width: 90%;
+//     background: #FEFCFC;
+//     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+//     border-radius: 6px;
+//     position: relative;
+// top: -3%;
+// margin-left: 4px;
     margin: auto;
     width: 90%;
-    background: #FEFCFC;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    position: relative;
-top: -3%;
-margin-left: 4px;
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 48px;
+
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow:none;
+    
 }
 .connexion{
-    background: #29B6F6;
-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-border-radius: 22px;
-margin: auto;
-display: flex;
-width: 60%;
+//     background: #29B6F6;
+// box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+// border-radius: 22px;
+// margin: auto;
+// display: flex;
+// width: 60%;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 48px;
+
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow:none;
 
 }
 .mpo{
-    position: relative;
-    left: 38%;
+    // position: relative;
+    // left: 38%;
+    margin-top: 5px;
+    padding-left: 90px;
     font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
 /* identical to box height */
 
 text-align: center;
@@ -107,20 +145,39 @@ text-align: center;
 
 color: #616161;
 }
-.creer{
-    position: relative;
-    left: 38%;
-    // top: -10%;
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 24px;
-/* identical to box height */
+// .creer{
+//     position: relative;
+//     left: 38%;
+//     // top: -10%;
+//     font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 500;
+// font-size: 12px;
+// line-height: 24px;
+// /* identical to box height */
 
-text-align: center;
-color: #000;
-top: -2px;
+// text-align: center;
+// color: #000;
+// top: -2px;
+// }
+.creer{
+    // position: relative;
+    // left: 38%;
+    margin-top: -15px;
+    padding-left: 90px;
+    // padding-right: 50px;
+    
+    // top: -6%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+    color: #000000;
+// top: -2px;
 }
 ion-icon{
     color: #29B6F6;

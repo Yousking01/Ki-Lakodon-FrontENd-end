@@ -19,10 +19,26 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
-    "@ionic/angular": "^6.1.9",
+    "@awesome-cordova-plugins/camera": "^6.3.0",
+    "@awesome-cordova-plugins/email-composer": "^6.3.0",
+    "@capacitor/android": "^4.6.3",
+    "@capacitor/camera": "^4.1.4",
+    "@capacitor/core": "^4.6.3",
+    "@capacitor/ios": "^4.6.3",
+    "@ionic-native/camera": "^5.36.0",
+    "@ionic-native/core": "^5.36.0",
+    "@ionic-native/email-composer": "^5.36.0",
+    "@ionic-native/printer": "^5.36.0",
+    "@ionic-native/push": "^5.36.0",
+    "@ionic/angular": "^6.5.4",
     "chart.js": "^4.2.0",
+    "cordova-plugin-email-composer": "^0.10.1",
+    "install": "^0.13.0",
     "ionicons": "^6.0.3",
-    "rxjs": "~7.5.0",
+    "npm": "^9.4.2",
+    "npm-check-updates": "^16.6.5",
+    "rxjs": "^6.5.0",
+    "swiper": "^6.8.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -36,12 +52,14 @@
     "@angular/compiler": "^15.0.0",
     "@angular/compiler-cli": "^15.0.0",
     "@angular/language-service": "^15.0.0",
+    "@capacitor/cli": "^4.6.3",
     "@ionic/angular-toolkit": "^6.0.0",
     "@ionic/lab": "3.2.15",
     "@types/jasmine": "~4.0.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
+    "cordova-plugin-camera": "^6.0.0",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -54,8 +72,16 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "phonegap-plugin-push": "^2.3.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.8.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "phonegap-plugin-push": {},
+      "cordova-plugin-email-composer": {},
+      "cordova-plugin-camera": {}
+    }
+  }
 }

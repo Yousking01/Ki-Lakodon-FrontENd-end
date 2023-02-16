@@ -12,4 +12,9 @@ export class FormulairePage implements OnInit {
   ngOnInit() {
   }
 
+
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
 }

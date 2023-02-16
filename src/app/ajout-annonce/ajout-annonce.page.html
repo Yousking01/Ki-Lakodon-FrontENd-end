@@ -9,66 +9,58 @@
     <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
  
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
-  <ion-icon class="search" name="search-outline"></ion-icon>
-  <ion-icon class="regle" name="options-outline"></ion-icon>
+  <!-- <ion-icon class="search" name="search-outline"></ion-icon>
+  <ion-icon class="regle" name="options-outline"></ion-icon> -->
   <h1>Remplis le formulaire de publicité</h1>
  
   <ion-label class="label">Nom de l'annonce</ion-label>
   <ion-input class="input" [(ngModel)]="titreannonce" name="titreannonce" type="text" placeholder="Nom de l'annonce"></ion-input>
-  <!-- <ion-label class="label">Titre</ion-label>
-   <ion-input class="input" type="text" placeholder="Titre de l'annonce"></ion-input> -->
+  <ion-label class="label">Budget</ion-label>
+   <ion-input class="input" type="number" placeholder="Budget" [(ngModel)]="budgetannonce" name="budgetannonce"></ion-input>
   <!-- <ion-label class="label">Date</ion-label>
   <ion-input class="input" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
   --> 
-  <ion-select class="label" interface="popover" placeholder="selectionner un annonceur" [(ngModel)]="idannonceur" name="idannonceur" >
+  <ion-label class="label">Selectionner un Annonceur</ion-label>
+  <ion-select class="input" style="color: black;" interface="popover" placeholder="selectionner un annonceur" [(ngModel)]="idannonceur" name="idannonceur" >
+    
     <ion-select-option class="input" *ngFor="let idannonceur of ListeAnnonceur" value="{{idannonceur.id}}">{{idannonceur.username}}</ion-select-option>
   </ion-select>
   <ion-card class="css"> 
 
     <ion-label class="label1">Date de Debut</ion-label>
-    <ion-input class="input1" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
-
-    <ion-label class="label2">Date de Fin</ion-label>
+   <!-- <ion-item>
+    <ion-label></ion-label>
+    <ion-datetime display-format="DD.MM.YYYY HH:mm"></ion-datetime>
+   </ion-item>  -->
+   <ion-input class="input1" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
+    
+    <ion-label class="label2" >Date de Fin</ion-label>
     <ion-input class="input2" [(ngModel)]="dateFin" name="dateFin" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
     
     <ion-label class="label3">Description de l'annonce</ion-label>
   <ion-input class="input3" [(ngModel)]="descriptionannonce" name="descriptionannonce" type="text" placeholder="Donner la description de votre annonce...."></ion-input>
     <br>
-  <ion-list>
-    <h1 class="diffusion">Site de Publicité</h1>
-    <ion-item>
-      <ion-select placeholder="Select all fruits that apply" [multiple]="true" [(ngModel)]="idsitepopulaire" name="idsitepopulaire">
-        <ion-select-option *ngFor="let listeSite of ListeSite" value="{{listeSite.idsitepopulaire}}">{{listeSite.nomsitepopulaire}}</ion-select-option>
-        
-      </ion-select>
-    </ion-item>
-  </ion-list>
-
-  <br><br><br>
   
-  <!-- <h1 class="diffusion">Cible de Diffusion</h1>
-    <ion-card class="cible">
-      <a href="#" class="aa">Malijet</a>
-    </ion-card>
-    <ion-card class="cible1">
-      <a href="#" class="aa1">Malijet</a>
-    </ion-card>
-    <ion-card class="cible2">
-      <a href="#" class="aa2">Malijet</a>
-    </ion-card>
-    <ion-card class="cible3">
-      <a href="#" class="aa3">Malijet</a>
-    </ion-card>
-    <ion-card class="cible4">
-      <a href="#" class="aa4">Malijet</a>
-    </ion-card> -->
+
+  <br>
+    <ion-label class="labimg">Ajouter l'image de l'annonce</ion-label>
     <ion-input class="dowload" type="file"  (change)="recupereImage($event)" name="image">
       <!-- <ion-icon  class="up" name="cloud-upload-outline"></ion-icon> -->
       <!-- <p class="tele">Télécharger un fichier</p> -->
       </ion-input>
+
+      <ion-list>
+        <h1 class="diffusion">Site de Publicité</h1>
+        <ion-item class="selct">
+          <ion-select interface="action-sheet" placeholder="Select all fruits that apply" [multiple]="true" [(ngModel)]="idsitepopulaire" name="idsitepopulaire">
+            <ion-select-option *ngFor="let listeSite of ListeSite" value="{{listeSite.idsitepopulaire}}">{{listeSite.nomsitepopulaire}}</ion-select-option>
+            
+          </ion-select>
+        </ion-item>
+      </ion-list>
       <br>
     <ion-button class="ajouter" color="primary" (click)="ajoutannonce()">Ajouter</ion-button>
-    <ion-button class="suprimer" color="danger">Suprimer</ion-button>
+    <!-- <ion-button class="suprimer" color="danger">Suprimer</ion-button> -->
 </ion-card>
 
 

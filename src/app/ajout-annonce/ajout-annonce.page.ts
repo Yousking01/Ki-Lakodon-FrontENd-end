@@ -12,11 +12,12 @@ export class AjoutAnnoncePage implements OnInit {
   titreannonce : string="";
   descriptionannonce : string= "";
   budgetannonce : string="";
-  dateDebut: string= "";
+  dateDebut: any;
   image: string="";
   idannonceur: number= 0;
   idsitepopulaire:number=0;
-  dateFin: string = "";
+  dateFin: any;
+  idannonce: number=0;
   // ciblediffusionannonce: string = "";
   ListeAnnonceur:any;
   ListeSite: any;
@@ -37,6 +38,12 @@ export class AjoutAnnoncePage implements OnInit {
     
   }
 
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
+ 
+    
   //METHODE PERMETTANT DE RECUPERER L IMAGE DE LA REGION
   recupereImage(event:any){
     this.image = event.target["files"][0];
@@ -45,6 +52,18 @@ export class AjoutAnnoncePage implements OnInit {
 
   ajoutannonce(){
     this.ajouteservice.ajoutannonce(this.titreannonce,this.descriptionannonce,this.budgetannonce,this.image,this.dateDebut,this.dateFin,this.idannonceur,this.idsitepopulaire).subscribe(data =>{
+      console.log(data);
+    })
+  }
+  //METHODE PERMETTANT DE SUPRIMER UNE ANNONCE AVEC ID
+  suprimerannonce(idanonne: number){
+    this.ajouteservice.suprimerannonce(idanonne).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+  modifierannonce(){
+    this.ajouteservice.modifierannonce(this.titreannonce,this.descriptionannonce,this.budgetannonce,this.image,this.dateDebut,this.dateFin,this.idannonce).subscribe(data =>{
       console.log(data);
     })
   }

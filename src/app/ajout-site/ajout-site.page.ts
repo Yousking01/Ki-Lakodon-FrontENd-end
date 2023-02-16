@@ -24,6 +24,11 @@ export class AjoutSitePage implements OnInit {
     
   }
 
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
+
   //METHODE PERMETTANT DE RECUPERER L IMAGE DE LA REGION
   recupereImage(event:any){
     this.image = event.target["files"][0];

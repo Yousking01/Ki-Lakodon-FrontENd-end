@@ -21,4 +21,9 @@ export class BoardAdminPage implements OnInit {
     );
   }
 
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
+
 }

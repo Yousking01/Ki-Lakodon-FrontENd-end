@@ -7,8 +7,8 @@
 <ion-content>
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
   <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
-  <ion-icon class="search" name="search-outline"></ion-icon>
-  <ion-icon class="regle" name="options-outline"></ion-icon>
+  <!-- <ion-icon class="search" name="search-outline"></ion-icon>
+  <ion-icon class="regle" name="options-outline"></ion-icon> -->
   <h1>Remplis le formulaire pour l'ajout <br> de votre site</h1>
   <ion-label class="label">Nom</ion-label>
   <ion-input class="input"  [(ngModel)]="nomsitepopulaire" name="nomsitepopulaire" type="text" placeholder="Veiller donner le nom de votre Site"></ion-input>
@@ -18,7 +18,7 @@
   <ion-input class="input" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
 
   <ion-card class="css">
-    <p class="statistique">Les Statistiques</p>
+    <!-- <p class="statistique">Les Statistiques</p>
     <ion-label class="label1">Abonnés</ion-label>
     <ion-input class="input1" type="number" placeholder="">1.6M</ion-input>
 
@@ -26,14 +26,16 @@
     <ion-input class="input2" type="number" placeholder="">1.6M</ion-input>
     
     <ion-label class="label21">Publications</ion-label>
-    <ion-input class="input21" type="number" placeholder="">1.6K</ion-input>
+    <ion-input class="input21" type="number" placeholder="">1.6K</ion-input> -->
     
     <ion-label class="label3">URL</ion-label>
-  <ion-input class="input3" [(ngModel)]="URL" name="URL" type="url" placeholder="Veiller donner l'URL de votre site..."></ion-input>
-  <ion-label class="label3">Description de votre site</ion-label>
-  <ion-input class="input3" type="text" placeholder="Donner la description de votre site...."></ion-input>
+    <ion-input class="input3" [(ngModel)]="URL" name="URL" type="url" placeholder="Veiller donner l'URL de votre site..."></ion-input>
+    <br>
+    <ion-label class="label3">Description de votre site</ion-label>
+    <ion-input class="input3" type="text" placeholder="Donner la description de votre site...."></ion-input>
+    <br>
     <h1 class="diffusion">Ajouter des fichier pour plus d'information sur le site</h1>
-    
+    <br>
     <!-- <ion-card class="dowload"> -->
       <!-- <ion-icon class="up" name="cloud-upload-outline"></ion-icon>
       <p class="tele">Télécharger un fichier</p> -->
@@ -44,7 +46,7 @@
       <p class="bas">Aider les autres en les diffusant sur votre site et les donnant de bon conseil dans le domaine de l'entreprenariat</p>
       
     <ion-button class="ajouter" color="primary" (click)="ajoutsite()">Ajouter</ion-button>
-    <ion-button class="suprimer" color="danger">Suprimer</ion-button>
+    <!-- <ion-button class="suprimer" color="danger">Suprimer</ion-button> -->
 
 
   </ion-card>

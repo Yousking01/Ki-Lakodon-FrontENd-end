@@ -7,7 +7,7 @@ ion-content {
     margin-right: -20px;
   }
 .tout{
-    --background: #fff;
+    --background: #f5f5f3;
     margin: auto;
 }
 img{
@@ -16,6 +16,26 @@ img{
     width: 30%;
     height: 15%;
     margin-top: 14px;
+}
+#header{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.profile-img-card{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 8px solid #000;
+    margin-top: -85px;
+}
+#form{
+    margin-top: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 h1 {
     position: relative;
@@ -62,27 +82,73 @@ ion-label{
     // margin: auto;
 }
 ion-input{
-    position: relative;
-    top: -10%;
+    // position: relative;
+    // top: -10%;
     // margin: auto;
+    margin: auto;
     width: 90%;
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 48px;
+
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow:none;
     // margin: auto;
-    left: 15px;
-    display: flex;
-    // justify-content: center;
-    background: #FEFCFC;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
+    // left: 15px;
+    // display: flex;
+    // // justify-content: center;
+    // background: #FEFCFC;
+    // box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    // border-radius: 50px;
+}
+.liste{
+    margin: auto;
+    width: 90%;
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 48px;
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow:none;
+}
+.selection{
+    width: 90%;
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow:none;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .connexion{
-    position: relative;
-    top: -6%;
-    background: #29B6F6;
-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-border-radius: 22px;
-margin: auto;
-display: flex;
-width: 60%;
+//     position: relative;
+//     // top: -6%;
+//     background: #29B6F6;
+// box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+// border-radius: 22px;
+// margin: auto;
+// display: flex;
+// width: 60%;
+
+margin-top: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 48px;
+
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+    --box-shadow:none;
+
 
 }
 // .mpo{
@@ -113,14 +179,17 @@ text-align: center;
 color: #616161;
 }
 .creer{
-    position: relative;
-    left: 38%;
+    // position: relative;
+    // left: 38%;
+    margin-top: -15px;
+    padding-left: 90px;
+    // padding-right: 50px;
     
-    top: -6%;
+    // top: -6%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 24px;
     /* identical to box height */
 

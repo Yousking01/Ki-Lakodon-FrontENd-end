@@ -1,6 +1,8 @@
 ion-content {
     width: calc(100% + 20px);
     --padding-end: 20px !important;
+    margin-left: 10px;
+    margin-right: 5px;
   }
   
   ion-content::part(scroll) {
@@ -45,38 +47,33 @@ ion-content {
     left: 230px;
   }
   h1{
-    position: relative;
-  // width: 301px;
-  height: 14px;
-  // left: 63px;
-  top: 30px;
-  text-align: center;
-  
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 14px;
+    margin-top: 20%;
+    text-align: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 14px;
+    color: #FFFFFF;
   /* identical to box height, or 56% */
   
   
-  color: #FFFFFF;
   }
   .css{
     --background: #fff;
     height: 100%;
-    // position: relative;
-    // top: -4%;
     border-radius: 50px;
-    position: relative;
-    top: 10%;
+    /* position: relative; */
+    top: 1%;
     margin: auto;
-    // margin-top: 15%;
   }
   .label{
-    position: relative;
-    left: 15px;
-    top: 5%;
+    // position: relative;
+    // left: 15px;
+    // top: 5%;
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -86,109 +83,142 @@ ion-content {
     color: #FFFFFF;
   }
 .input{
-    position: relative;
-    left: 15px;
-    top: 4%;
+    margin-right: 5px;
+    margin-left: 10px;
+    /* padding-left: 5px; */
+    /* position: relative; */
+    /* left: 15px; */
+    /* top: 4%; */
     width: 85%;
-    font-family: 'Inter';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     border-bottom: 1px solid;
-
-
     color: #FFFFFF;
+
+
+    // color: #FFFFFF;
 }
 .label1{
-    position: relative;
-    top: 15px;
-    left: 40px;
-    font-family: 'Inter';
+    display: flex;
+    /* padding-left: 40px; */
+    font-family: "Inter";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 17px;
-    /* identical to box height */
-
-
     color: #29B6F6;
+    justify-content: flex-start;
+    align-items: start;
+    margin-top: 15px;
+    margin-left: 35px;
 }
+
 .input1{
-    left: 40px;
-    width: 28%;
-    top: 2%;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 17px;
-    text-align: center;
-    border-bottom: 1px solid #EEE6E6;
+    margin-top: 2px;
+    /* margin-left: 34px; */
+    /* padding-left: 0px; */
+    width: 41%;
+    /* --padding-top: 0px; */
+    --padding-end: 0px;
+    --padding-bottom: 10px;
+    --padding-start: 34px;
+    font-size: inherit;
 }
 .input2{
+
+    display: flex;
     left: 60%;
-    width: 28%;
-    top: -8%;
-    font-family: 'Inter';
+    width: 30%;
+    top: -9%;
+    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 17px;
     text-align: center;
     border-bottom: 1px solid #EEE6E6;
+    align-items: end;
+    justify-content: flex-end;
+
 }
+
+
 .label2{
+
+
+    margin-right: 50px;
     position: relative;
-    left: 60%;
-    width: 30%;
-    top: -7.5%;
-    font-family: 'Inter';
+    /* left: 60%; */
+    /* width: 30%; */
+    top: -9.5%;
+    font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 17px;
-    /* identical to box height */
-
-
     color: #29B6F6;
+    align-items: start;
+    justify-content: flex-end;
+    display: flex;
+
+
 }
 .label3{
-    font-family: 'Poppins';
+    margin-left: 15px;
+    /* align-items: flex-start; */
+    /* margin-top: 0px; */
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 14px;
-    /* identical to box height, or 88% */
-    position: relative;
-    left: 15px;
-    top: -4%;
-
+    /* position: relative; */
+    /* left: 15px; */
+    /* top: -4%; */
     color: #29B6F6;
+    display: flex;
+    margin-top: -40px;
 }
 .input3{
-    font-family: 'Inter';
+    margin-left: 10px;
+    font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 16px;
-    /* identical to box height */
     width: 85%;
-    left: 15px;
-    position: relative;
+    /* left: 15px; */
+    /* position: relative; */
     height: 10%;
-    top: -4%;
-
-
+    /* top: -4%; */
     color: #544C4C;
-    border-bottom: 1px solid #EEE6E6;
+    border: 1px solid #EEE6E6;
+    margin-top: 5px;
 
 }
 .diffusion{
-    position: relative;
-    left: -60px;
-    top: -4%;
+    /*width: 50%; */
+    margin-top: 13px;
+    justify-content: flex-start;
+    /* position: relative; */
+    /* left: -60px; */
+    /* top: -4%; */
     color: #29B6F6;
+    display: flex;
+    margin-left: 10px;
+}
+ion-select{
+    width: 90%;
+    margin-left: 10px;
+    // color: #fff;
+}
+.selct{
+    width: 90%;
+    margin-left: 10px;
+    
 }
 .cible{
 
@@ -337,30 +367,29 @@ ion-content {
     color: #000000;
 }
 .dowload{
-    /* Drag and Drop Field */
-
-
+    margin-left: 12px;
+    margin-top: -30px;
     box-sizing: border-box;
-
-    /* Auto layout */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 40px 29px 40px 41px;
     gap: 10px;
-
     position: relative;
-    width: 250px;
-    height: 50px;
-    // left: 54px;
-    // top: 645px;
-    top: -34%;
-
-    /* Input text */
-
+    width: 90%;
+    height: 10%;
     border: 1px dashed #8E8E8E;
+}
+.labimg{
+
+    margin-left: 10px;
+    top: -5%;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    color: #29B6F6;
+    position: relative;
 }
 .up{
     width: 24px;
@@ -382,16 +411,18 @@ ion-content {
 }
 .ajouter{
    
-position: absolute;
-width: 100px;
-height: 31px;
-left: 29px;
-// padding-left: 5px;
-top: 70%;
-color: #fff;
-//background: #29B6F6;
-box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
-border-radius: 10px;
+    margin: auto;
+    /* position: absolute; */
+    width: 100px;
+    height: 31px;
+    /* left: 29px; */
+    /* top: 70%; */
+    color: #fff;
+    box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .suprimer{
     position: absolute;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from '../_helpers/auth.guard';
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
@@ -13,15 +14,18 @@ const routes: Routes = [
       },
       {
         path: 'profilsite/:id',
-        loadChildren: () => import('../profilsite/profilsite.module').then( m => m.ProfilsitePageModule)
+        loadChildren: () => import('../profilsite/profilsite.module').then( m => m.ProfilsitePageModule),
+        // canLoad:[AuthGuardService]
       },
       {
         path: 'profilannonceur',
-        loadChildren: () => import('../profilannonceur/profilannonceur.module').then( m => m.ProfilannonceurPageModule)
+        loadChildren: () => import('../profilannonceur/profilannonceur.module').then( m => m.ProfilannonceurPageModule),
+        // canLoad:[AuthGuardService]
       },
       {
         path: 'dashboard',
-        loadChildren: () => import('../dashboard/dashboard.module').then( m => m.DashboardPageModule)
+        loadChildren: () => import('../dashboard/dashboard.module').then( m => m.DashboardPageModule),
+        // canLoad:[AuthGuardService]
       },
       {
         path: '',

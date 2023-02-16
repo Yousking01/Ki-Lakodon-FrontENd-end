@@ -77,6 +77,14 @@ const routes: Routes = [
   {
     path: 'board-admin',
     loadChildren: () => import('./board-admin/board-admin.module').then( m => m.BoardAdminPageModule)
+  },
+  {
+    path: 'listeannonce',
+    loadChildren: () => import('./listeannonce/listeannonce.module').then( m => m.ListeannoncePageModule)
+  },
+  {
+    path: 'sendmail',
+    loadChildren: () => import('./sendmail/sendmail.module').then( m => m.SendmailPageModule)
   }
 ];
 @NgModule({

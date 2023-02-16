@@ -70,6 +70,9 @@ export class ProfilannonceurPage implements OnInit {
 
   ngOnInit() {
   }
- 
+   //reload Page
+   reloadPage() {
+    window.location.reload();
+  }
 
 }

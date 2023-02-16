@@ -4,7 +4,7 @@ import { NotificationComponent } from '../notification/notification.component';
 import { AjoutServiceService } from '../_service/ajout-service.service';
 import { AjoutsiteService } from '../_service/ajoutsite.service';
 import { TokenStorageService } from '../_service/token-storage.service';
-
+import { ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -24,7 +24,7 @@ export class DashboardPage implements OnInit {
   };
 
 
-  constructor(private pvrc:PopoverController, private tokenStorage: TokenStorageService, private ajouteservice : AjoutServiceService,private ajoutsiteService : AjoutsiteService) { }
+  constructor(private toastCtrl: ToastController,private pvrc:PopoverController, private tokenStorage: TokenStorageService, private ajouteservice : AjoutServiceService,private ajoutsiteService : AjoutsiteService) { }
 
   ngOnInit() {
 
@@ -46,7 +46,37 @@ export class DashboardPage implements OnInit {
   }
 
   logout(): void{
-    this.tokenStorage.clearToken()
+    this.tokenStorage.clearToken();
+    this.tokenStorage.clearToken();
+  }
+  async voir(){
+    let toast = await this.toastCtrl.create({
+      message: "Une nouvelle annonce a été lancée",
+      duration:2000,
+      color:"white",
+      position:"top",   
+      buttons:[{
+  // text:"Fermer",
+  role:"cancel",
+  icon:"close",
+  handler: () => {
+    console.log('merci');
+  }
+}
+]
+})
+toast.present();
   }
 
+  //METHODE PERMETTANT DE SUPRIMER UNE ANNONCE AVEC ID
+  suprimerannonce(idannonce: number){
+    this.ajouteservice.suprimerannonce(idannonce).subscribe(data => {
+      console.log(data);
+    })
+  }
+
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
 }

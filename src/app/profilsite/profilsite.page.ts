@@ -100,4 +100,10 @@ export class ProfilsitePage implements OnInit {
 
     
   }
+
+
+    //reload Page
+    reloadPage() {
+      window.location.reload();
+    }
 }

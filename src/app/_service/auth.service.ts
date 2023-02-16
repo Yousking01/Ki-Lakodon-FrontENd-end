@@ -18,7 +18,7 @@ const httpOptions = {
 export class AuthService {
 
   url ='http://localhost:8080/api/auth/signin'
-
+  urlrole ='http://localhost:8080'
   constructor(private http: HttpClient) { }
 
   login(credentials: ICredential): Observable<IToken> {
@@ -46,4 +46,7 @@ export class AuthService {
     return this.http.post(AUTH_API + 'signout', {}, httpOptions);
   }
 
+  listerole(): Observable<any> {
+    return this.http.get(this.urlrole + `/api/auth/role` );
+  }
 }

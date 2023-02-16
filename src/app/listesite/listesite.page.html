@@ -7,8 +7,8 @@
 <ion-content>
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
   <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
-  <ion-icon class="search" name="search-outline"></ion-icon>
-  <ion-icon class="regle" name="options-outline"></ion-icon>
+  <!-- <ion-icon class="search" name="search-outline"></ion-icon> -->
+  <!-- <ion-icon class="regle" name="options-outline"></ion-icon> -->
 <ion-card class="card1">
   <p class="titree">Sites</p>
   <ion-button name="add" class="ajouter">
@@ -26,21 +26,20 @@
   <!-- <ion-card class="card4">
 
   </ion-card> -->
-</ion-card>
+</ion-card>  <br>
 <p class="liste">Liste des sites Populaire</p>
-<br><br>
 
 <ion-card class="card5" *ngFor="let listSite of ListeSite">
   <a class="nomsite" routerLink="/tabs/profilsite/{{listSite.idsitepopulaire}}">{{listSite.nomsitepopulaire}}</a> 
   <a routerLink="/tabs/profilsite/{{listSite.idsitepopulaire}}"> <img class="image" src="../../assets/{{listSite.image}}" alt=""></a>
 </ion-card>
-<br> <br>
-<!-- <ion-card class="card5">
+
+ <!-- <ion-card class="card5">
   <a class="nomsite" href="#">MaliJet</a> 
   <a href="#"> <img class="image" src="../../assets/logo_malijet.png" alt=""></a>
-</ion-card>
-<br>
-<ion-card class="card5">
+</ion-card> -->
+
+<!--<ion-card class="card5">
   <a class="nomsite" href="#">MaliJet</a> 
   <a href="#"> <img class="image" src="../../assets/logo_malijet.png" alt=""></a>
 </ion-card>

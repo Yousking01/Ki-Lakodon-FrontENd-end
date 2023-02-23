@@ -1,3 +1,45 @@
+ion-header{
+    ion-icon {
+      font-size: 35px;
+      position: relative;
+      margin-right: 130px;
+      color: #aaa;
+      z-index: 111;
+  
+     
+    }
+    #notifications-badge-msg{
+      background-color: rgb(67, 7, 233);
+      position: absolute;
+      top: 10px;
+      right: 72px;
+      color: #FFFFFF;
+      z-index: 111;
+    }
+    .imagee{
+      margin-top: 0px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 5px;
+      margin-bottom: 5px;
+  
+    }
+    .sig1{
+      position: absolute;
+      margin-top: 0px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      /* margin-right: 14px; */
+      margin-bottom: 5px;
+      top: 5px;
+      right: -90px;
+    }
+    .sig1:hover{
+      color: red;
+    }
+  }
 ion-content {
     width: calc(100% + 20px);
     --padding-end: 20px !important;
@@ -47,7 +89,7 @@ ion-content {
     left: 230px;
   }
   h1{
-    margin-top: 20%;
+    // margin-top: 20%;
     text-align: center;
     font-family: "Poppins";
     font-style: normal;
@@ -60,18 +102,23 @@ ion-content {
   
   }
   .css{
+    top: 10px;
+    /* margin-top: 5px; */
     --background: #fff;
     height: 100%;
-    border-radius: 50px;
-    /* position: relative; */
-    top: 1%;
+    /* border-radius: 50px; */
+    /* top: 1%; */
+    /* margin: auto; */
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     margin: auto;
   }
   .label{
     // position: relative;
     // left: 15px;
     // top: 5%;
-    margin-top: 10px;
+    // margin-top: 10px;
     padding-left: 15px;
     padding-right: 10px;
     font-family: 'Inter';
@@ -83,13 +130,7 @@ ion-content {
     color: #FFFFFF;
   }
 .input{
-    margin-right: 5px;
-    margin-left: 10px;
-    /* padding-left: 5px; */
-    /* position: relative; */
-    /* left: 15px; */
-    /* top: 4%; */
-    width: 85%;
+    width: 90%;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -97,127 +138,171 @@ ion-content {
     line-height: 17px;
     border-bottom: 1px solid;
     color: #FFFFFF;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    border-radius: 10px;
 
 
     // color: #FFFFFF;
 }
 .label1{
-    display: flex;
-    /* padding-left: 40px; */
+    // display: flex;
+    // font-family: "Inter";
+    // font-style: normal;
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 17px;
+    // color: #29B6F6;
+    // justify-content: flex-start;
+    // align-items: start;
+    // margin-top: 10px;
+    // margin-left: 30px;
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 17px;
     color: #29B6F6;
-    justify-content: flex-start;
-    align-items: start;
-    margin-top: 15px;
     margin-left: 35px;
 }
 
 .input1{
-    margin-top: 2px;
-    /* margin-left: 34px; */
-    /* padding-left: 0px; */
-    width: 41%;
-    /* --padding-top: 0px; */
-    --padding-end: 0px;
-    --padding-bottom: 10px;
-    --padding-start: 34px;
+    border-radius: 20px;
+    margin-left: 24px;
+    /* margin-top: 0px; */
+    width: 70%;
+    --padding-start: 2px;
     font-size: inherit;
+    border: 1px solid;
+    /* display: flex; */
+    /* justify-content: center; */
+    height: 45%;
+    box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
 }
 .input2{
+    
+    border-radius: 20px;
+    margin-left: -10px;
+    width: 85%;
+    --padding-start: 2px;
+    font-size: inherit;
+    border: 1px solid;
+    height: 45%;box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
 
+}
+.date{
+    margin: auto;
     display: flex;
-    left: 60%;
-    width: 30%;
-    top: -9%;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 17px;
-    text-align: center;
-    border-bottom: 1px solid #EEE6E6;
-    align-items: end;
-    justify-content: flex-end;
-
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 2px;
 }
 
 
 .label2{
 
 
-    margin-right: 50px;
-    position: relative;
-    /* left: 60%; */
-    /* width: 30%; */
-    top: -9.5%;
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 17px;
     color: #29B6F6;
-    align-items: start;
-    justify-content: flex-end;
-    display: flex;
-
 
 }
 .label3{
+    margin: auto;
     margin-left: 15px;
-    /* align-items: flex-start; */
-    /* margin-top: 0px; */
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 14px;
-    /* position: relative; */
-    /* left: 15px; */
-    /* top: -4%; */
     color: #29B6F6;
     display: flex;
-    margin-top: -40px;
+    // margin-top: 15px;
 }
 .input3{
-    margin-left: 10px;
-    font-family: "Inter";
+    // margin-left: 10px;
+    // font-family: "Inter";
+    // font-style: normal;
+    // font-weight: 500;
+    // font-size: 15px;
+    // line-height: 16px;
+    // width: 85%;
+    // /* left: 15px; */
+    // /* position: relative; */
+    // height: 10%;
+    // /* top: -4%; */
+    // color: #544C4C;
+    // border: 1px solid #EEE6E6;
+    // margin-top: 5px;
+    width: 90%;
+    font-family: "Poppins";
     font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 16px;
-    width: 85%;
-    /* left: 15px; */
-    /* position: relative; */
-    height: 10%;
-    /* top: -4%; */
-    color: #544C4C;
-    border: 1px solid #EEE6E6;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px dashed;
+    color: #2e2b2b;
+    /* display: flex; */
+    margin: auto;
+    /* justify-content: space-around; */
+    border-radius: 10px;
+    height: 12%;
     margin-top: 5px;
+    // box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
 
 }
 .diffusion{
-    /*width: 50%; */
-    margin-top: 13px;
-    justify-content: flex-start;
-    /* position: relative; */
-    /* left: -60px; */
-    /* top: -4%; */
+    margin: auto;
+    margin-left: 15px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
     color: #29B6F6;
     display: flex;
-    margin-left: 10px;
 }
-ion-select{
+.ion-item{
     width: 90%;
-    margin-left: 10px;
-    // color: #fff;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid;
+    color: #FFFFFF;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    border-radius: 10px;
 }
+// ion-select{
+//     width: 90%;
+//     font-family: "Poppins";
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 17px;
+//     border-bottom: 1px solid;
+//     // color: #FFFFFF;
+//     display: flex;
+//     margin: auto;
+//     justify-content: space-around;
+//     border-radius: 10px;
+// }
 .selct{
+    border: 1px solid;
     width: 90%;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    display: flex;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
     
 }
 .cible{
@@ -367,29 +452,51 @@ ion-select{
     color: #000000;
 }
 .dowload{
-    margin-left: 12px;
-    margin-top: -30px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
+    // margin-left: 12px;
+    // margin-top: -30px;
+    // box-sizing: border-box;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // gap: 10px;
+    // position: relative;
+    // width: 90%;
+    // height: 10%;
+    // border: 1px dashed #8E8E8E;
     width: 90%;
-    height: 10%;
-    border: 1px dashed #8E8E8E;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px dashed;
+    color: #2e2b2b;
+    margin: auto;
+    // border-radius: 10px;
+    height: 12%;
+    margin-top: 5px;
+    box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
 }
 .labimg{
 
-    margin-left: 10px;
-    top: -5%;
+    // margin-left: 10px;
+    // top: -5%;
+    // font-family: "Poppins";
+    // font-style: normal;
+    // font-weight: 400;
+    // font-size: 16px;
+    // line-height: 14px;
+    // color: #29B6F6;
+    // position: relative;
+    margin: auto;
+    margin-left: 15px;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 14px;
     color: #29B6F6;
-    position: relative;
+    display: flex;
 }
 .up{
     width: 24px;

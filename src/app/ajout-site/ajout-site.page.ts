@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AjoutsiteService } from '../_service/ajoutsite.service';
+import { TokenStorageService } from '../_service/token-storage.service';
 
 @Component({
   selector: 'app-ajout-site',
@@ -14,7 +15,7 @@ export class AjoutSitePage implements OnInit {
   ListeSite: any;
   
 
-  constructor( private ajoutsiteService: AjoutsiteService) { }
+  constructor( private ajoutsiteService: AjoutsiteService,private tokenStorage: TokenStorageService) { }
 
   ngOnInit() {
     this.ajoutsiteService.listSite().subscribe(data =>{
@@ -40,5 +41,15 @@ export class AjoutSitePage implements OnInit {
       console.log(data);
     })
   }
+  // async opennotif() {
+  //   const popup = await this.pvrCtlr.create({
+  //     component: NotificationComponent,
+  //   });
+  //   popup.present();
+  // }
 
+  logout(): void{
+    this.tokenStorage.clearToken();
+    this.tokenStorage.clearToken();
+  }
 }

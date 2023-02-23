@@ -8,6 +8,7 @@ import { TokenStorageService } from '../_service/token-storage.service';
   styleUrls: ['./listesite.page.scss'],
 })
 export class ListesitePage implements OnInit {
+  
   ListeSite: any;
 
   constructor(private tokenStorage: TokenStorageService, private ajoutsiteService : AjoutsiteService) { }
@@ -26,6 +27,10 @@ export class ListesitePage implements OnInit {
     //reload Page
     reloadPage() {
       window.location.reload();
+    }
+    logout(): void{
+      this.tokenStorage.clearToken();
+      this.tokenStorage.clearToken();
     }
 
 }

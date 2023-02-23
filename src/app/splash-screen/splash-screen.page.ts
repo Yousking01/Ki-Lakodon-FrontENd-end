@@ -12,7 +12,7 @@ screen: any;
 
   constructor(public router: Router) { 
     setTimeout(()=>{
-      this.router.navigateByUrl('/tabs/home');
+      this.router.navigateByUrl('/debut');
     },
     3000);
   }

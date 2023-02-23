@@ -7,6 +7,7 @@ import { TokenStorageService } from './token-storage.service';
   providedIn: 'root'
 })
 export class AjoutsiteService {
+  
   listeAnnonce() {
     throw new Error('Method not implemented.');
   }

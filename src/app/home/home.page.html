@@ -1,14 +1,21 @@
 <ion-header [translucent]="true" class="header">
   <ion-toolbar color="">
     <ion-buttons slot="start" class="menu_btn">
-      <ion-back-button defaultHref="search-chef" color="primary"></ion-back-button>
+      <ion-back-button defaultHref="#" color="primary"></ion-back-button>
     </ion-buttons>
     <ion-title style="--text-color: #000;">
       Accueil
     </ion-title>
-    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;" ></ion-icon>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
     <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
-    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="">
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
   </ion-toolbar>
 </ion-header>
  <!-- [scrollX]="true" [scrollY]="true" -->
@@ -141,7 +148,7 @@
     <a href="listesite.module" class="annonce">Liste Site_Web</a>
   </ion-card>
 
-  <ion-card class="card14" *ngIf="admin || SitewebR" routerLink="/ajout-site" >
+  <ion-card class="card14" *ngIf="admin || SitewebR" routerLink="/formulaire" >
     <img class="annonceimg"  src="../../assets/accueil/site.png" alt=""> 
     <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
       <a href="ajout-site.module" class="annonce">Ajouter un Site</a>
@@ -159,37 +166,56 @@
     <img class="imgRond" src="../../assets/Ki-lakodon 1.png" alt="">
     </ion-card>
   </div>
-  <ul class="card-wrapper">
-    <li class="card" style="height: 80%;
-    width: 90%;">
-      <img class="imgcardd" src='../../assets/accueil/img4slide.jpg' alt=''>
-      <!-- <h3><a href="">A Super Wonderful Headline</a></h3> -->
-      <p>AW yé Na aw La-Kodon</p>
-    </li>
-    <br>
 
+  <div class="divc" style="
+  /*margin-left: 5px; */
+  padding-left: 10px;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-evenly;
+  /* margin: auto; */
+  padding-right: 10px;
+  margin-right: 5px;
+  ">
+  <!-- <ul class="card-wrapper">
     <li class="card" style="height: 80%;
     width: 90%;">
-      <img class="imgcardd" src='../../assets/accueil/ia_recherche.jpg' alt=''>
+      <img class="imgcardd" src='../../assets/accueil/img4slide.jpg' alt=''> -->
       <!-- <h3><a href="">A Super Wonderful Headline</a></h3> -->
-      <p>Venez faire la pub sur chez les meilleures</p>
-    </li>
+      <!-- <p>AW yé Na aw La-Kodon</p>
+    </li> -->
+    <!-- <br> -->
+
+    <!-- <li class="card" style="height: 80%;
+    width: 90%;">
+      <img class="imgcardd" src='../../assets/accueil/ia_recherche.jpg' alt=''> -->
+      <!-- <h3><a href="">A Super Wonderful Headline</a></h3> -->
+      <!-- <p>Venez faire la pub sur chez les meilleures</p>
+    </li> -->
     <!-- <li class="card">
       <img class="imgcardd" src='../../assets/accueil/img7slide.jpg' alt=''>
       <h3><a href="">Positively Terrific Title</a></h3>
       <p>Lorem ipsum sit dolor amit</p>
     </li> -->
-  </ul>
+  <!-- </ul> -->
+  <ion-card class="backimg">
+    <p class="textt">AW yé Na aw La-Kodon</p>
+  </ion-card>
+  <ion-card class="backimg2">
+    <!-- <p class="textt">Venez faire la pub sur chez les meilleures</p> -->
+  </ion-card>
+</div>
   
 
-  <div style="width: 90% !important; margin-top: 25px; margin-bottom: 10px;margin-left: 10px; margin-right: 10px;" >
+  
     <!-- <swiper effect="fade">
       <ng-template swiperSlide>Slide 1</ng-template>
       <ng-template swiperSlide>Slide 2</ng-template>
       <ng-template swiperSlide>Slide 3</ng-template>
     </swiper> -->
 
-    <ion-slides style="border-radius: 20px;" [options]="slideOpts1" pagination="true" [scrollbar]="true" zoom="true">
+    <ion-slides style="border-radius: 20px;" [options]="slideOpts1" pagination="true" [scrollbar]="true" >
+      <!-- zoom="true" -->
      
       <ion-slide>
         <ion-img src="../../assets/accueil/img10slide.jpg" ></ion-img>
@@ -210,7 +236,7 @@
     </ion-slides>
     
 
-  </div>
+  
   
   <!-- <ion-card class="css aniamated bounceInUp" >  -->
     <!-- <ion-card class="card2">

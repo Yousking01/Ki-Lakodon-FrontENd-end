@@ -81,5 +81,9 @@ export class HomePage implements OnInit {
     reloadPage() {
       window.location.reload();
     }
+    logout(): void{
+      this.tokenStorage.clearToken();
+      this.tokenStorage.clearToken();
+    }
 
 }

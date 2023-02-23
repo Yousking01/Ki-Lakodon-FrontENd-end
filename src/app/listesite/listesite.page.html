@@ -3,15 +3,34 @@
     <ion-title>listesite</ion-title>
   </ion-toolbar>
 </ion-header> -->
-
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="#" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="--text-color: #000;">
+      Liste Sites
+    </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
-  <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
+  <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
   <!-- <ion-icon class="search" name="search-outline"></ion-icon> -->
   <!-- <ion-icon class="regle" name="options-outline"></ion-icon> -->
 <ion-card class="card1">
   <p class="titree">Sites</p>
-  <ion-button name="add" class="ajouter">
+  <ion-button name="add" class="ajouter" routerLink="/ajout-site">
     <!-- <ion-icon name="add-circle-outline"></ion-icon> -->
     add
   </ion-button>

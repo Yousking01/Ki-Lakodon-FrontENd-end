@@ -85,7 +85,15 @@ const routes: Routes = [
   {
     path: 'sendmail',
     loadChildren: () => import('./sendmail/sendmail.module').then( m => m.SendmailPageModule)
-  }
+  },
+  {
+    path: 'debut',
+    loadChildren: () => import('./debut/debut.module').then( m => m.DebutPageModule)
+  },
+  // {
+  //   path: 'debut',
+  //   loadChildren: () => import('./debut/debut.module').then( m => m.DebutPageModule)
+  // }
 ];
 @NgModule({
   imports: [

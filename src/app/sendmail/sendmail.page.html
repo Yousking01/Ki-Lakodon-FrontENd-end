@@ -1,6 +1,26 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>sendmail</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="#" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="--text-color: #000;">
+      ENvoie de Mail
+    </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
   </ion-toolbar>
 </ion-header>
 <!-- (click)="captureImage()" -->

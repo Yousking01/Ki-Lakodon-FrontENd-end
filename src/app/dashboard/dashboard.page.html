@@ -4,6 +4,27 @@
   </ion-toolbar>
 </ion-header>
  -->
+ <ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="#" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="--text-color: #000;">
+      Tâche
+    </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content id="#header" [fullscreen]="true">
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
   <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
@@ -27,13 +48,13 @@
 
   <!-- </ion-button> -->
 
-  <h1>Dashboard Ki-Lakodon</h1>
-  <ion-icon name="log-in-outline" class="signup" routerLink="/inscription"></ion-icon>
-  <ion-icon name="person-outline" class="login" routerLink="/connexion"></ion-icon>
-  <ion-icon class="signup1" (click)="logout()"  name="log-out-outline"></ion-icon>
-  <p>Compte <br> Connectés <a href=""><ion-icon class="Add" name="add-circle-outline" routerLink="/sendmail"></ion-icon>
+  <h1 style="text-align: center; margin: auto;padding-top: 5px;">Ki-Lakodon</h1>
+  <!-- <ion-icon name="log-in-outline" class="signup" routerLink="/inscription"></ion-icon> -->
+  <!-- <ion-icon name="person-outline" class="login" routerLink="/connexion"></ion-icon> -->
+  
+  <!-- <p>Compte <br> Connectés <a href=""><ion-icon class="Add" name="add-circle-outline" routerLink="/sendmail"></ion-icon>
 
-    </a></p>
+    </a></p> -->
 
   <ion-slides [options]="slideOpts " style="height: 30%!important;   width: 100%!important;">
     <ion-slide *ngFor="let listSite of ListeSite">
@@ -48,115 +69,44 @@
           <figcaption class="figcaption">{{listSite.url}}</figcaption>
         </span>
       </ion-card>
-      <ion-card class="card-slides" size="2">
-        <!-- <span> -->
-        <!-- <img class="image" src="../../assets/mali-maliweb-malijet-maliactu-bamada-koulouba.png" alt=""> -->
-        <!-- <figcaption><a href="#" class="a" >Malijet.com</a></figcaption> -->
-        <!-- <figcaption class="figcaption">Abonnés: 1,2M</figcaption> -->
-        <!-- </span> -->
-      </ion-card>
-      <ion-card class="card-slides">
-        <!-- <span>
-          <img src="../../assets/logo.PNG" alt="">
-          <figcaption><a href="#"  class="a" >Malijet.com</a></figcaption>
-        </span> -->
-      </ion-card>
+     
 
     </ion-slide>
-    <!-- <ion-slide >
-      <ion-card class="card-slides" size="2">
-        <span>
-          <img class="image" src="../../assets/mali-maliweb-malijet-maliactu-bamada-koulouba.png" alt="">
-          <figcaption><a href="#" class="a" >Malijet.com</a></figcaption>
-          <figcaption class="figcaption">Abonnés: 1,2M</figcaption>
-        </span>
-      </ion-card>
-      <ion-card class="card-slides" size="2">
-        <span>
-          <img class="image" src="../../assets/mali-maliweb-malijet-maliactu-bamada-koulouba.png" alt="">
-          <figcaption><a href="#" class="a" >Malijet.com</a></figcaption>
-          <figcaption class="figcaption">Abonnés: 1,2M</figcaption>
-        </span>
-      </ion-card>
+    
       
-    </ion-slide>
-     -->
   </ion-slides>
 
   <ion-card class="css">
     <h1 class="text2">Les mises en rélation du effectuer</h1>
-    <ion-card class="card2" *ngFor="let idannonceur of ListeAnnonceur">
+    
 
-      <h2> {{idannonceur.username}} <ion-button class="b">voir plus</ion-button>
+      <!-- <ion-button class="b">voir plus</ion-button> -->
+     
+
+    <ion-card class="crd" *ngFor="let idannonceur of ListeAnnonceur ">
+    <div>
+      <h2 class="bb">
+        {{idannonceur.username}}
       </h2>
-      <a href="#"><ion-icon class="i" name="create-outline"></ion-icon></a>
-      <a (click)="suprimerannonce(idannonceur.id)"><ion-icon class="ii" name="trash-outline"></ion-icon></a>
-      <br>
-      <p class="p2">Email: {{idannonceur.email}}<br>
+      <p class="bb2" style="color: #000;">Email:
+        {{idannonceur.email}}
         <!-- N° de validation : 0989898989 -->
-        <br>
+        
         {{idannonceur.adrresseannonceur}},
         <br>
-        Budget: {{idannonceur.budgetannonceur}}
+        Budget:
+        {{idannonceur.budgetannonceur}}
+        <br>
+        Téléphone :
+        {{idannonceur.numeroannonceur}}
       </p>
-      <p class="P3">Téléphone : {{idannonceur.numeroannonceur}}</p>
-
-
-
-    </ion-card>
-
-    <!-- <ion-card class="card2">
-      <h2>Fana-Shop <ion-button class="b">voir plus</ion-button>
-      </h2>
       <a href="#"><ion-icon class="i" name="create-outline"></ion-icon></a>
-      <a href="#"><ion-icon class="ii" name="trash-outline"></ion-icon></a>
-      <p class="p2">Youssouf Djiré <br>
-        N° de validation : 0989898989
-        <br>
-        ACI 2000, 541, Carré-Ni-N'Kou,
-        <br>
-        Prêt du Lycée, Lafiabougou
-      </p>
-      <p class="P3">Téléphone : 72095772</p>
-
-
-
+      <a ><ion-icon class="ii" name="trash-outline"></ion-icon></a>
+        
+        
+    </div>
+      <img src="../../assets/accueil/1614275613-publicite-youtube.png" alt="" class="annonimg">
     </ion-card>
-
-    <ion-card class="card2">
-      <h2>Fana-Shop <ion-button class="b">voir plus</ion-button>
-      </h2>
-      <a href="#"><ion-icon class="i" name="create-outline"></ion-icon></a>
-      <a href="#"><ion-icon class="ii" name="trash-outline"></ion-icon></a>
-      <p class="p2">Youssouf Djiré <br>
-        N° de validation : 0989898989
-        <br>
-        ACI 2000, 541, Carré-Ni-N'Kou,
-        <br>
-        Prêt du Lycée, Lafiabougou
-      </p>
-      <p class="P3">Téléphone : 72095772</p>
-
-
-
-    </ion-card>
-    <ion-card class="card2">
-      <h2>Fana-Shop <ion-button class="b">voir plus</ion-button>
-      </h2>
-      <a href="#"><ion-icon class="i" name="create-outline"></ion-icon></a>
-      <a href="#"><ion-icon class="ii" name="trash-outline"></ion-icon></a>
-      <p class="p2">Youssouf Djiré <br>
-        N° de validation : 0989898989
-        <br>
-        ACI 2000, 541, Carré-Ni-N'Kou,
-        <br>
-        Prêt du Lycée, Lafiabougou
-      </p>
-      <p class="P3">Téléphone : 72095772</p>
-
-
-
-    </ion-card> -->
 
   </ion-card>
 

@@ -6,6 +6,7 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 // import { Camera } from '@awesome-cordova-plugins/camera/ngx';
 // import { EmailComposer } from '@ionic-native/email-composer';
 import { NavController } from '@ionic/angular';
+import { TokenStorageService } from '../_service/token-storage.service';
 // import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
@@ -23,7 +24,7 @@ export class SendmailPage implements OnInit {
   email!:any
   // camera: any;
 
-  constructor( private emailComposer: EmailComposer, private navCtrl: NavController) { }
+  constructor( private emailComposer: EmailComposer, private navCtrl: NavController,private tokenStorage: TokenStorageService) { }
  
   ngOnInit() {
     // this.email = {
@@ -92,6 +93,10 @@ export class SendmailPage implements OnInit {
     //reload Page
     reloadPage() {
       window.location.reload();
+    }
+    logout(): void{
+      this.tokenStorage.clearToken();
+      this.tokenStorage.clearToken();
     }
 // async sendEmail() {
 

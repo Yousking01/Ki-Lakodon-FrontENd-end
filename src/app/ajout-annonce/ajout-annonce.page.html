@@ -1,12 +1,27 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>ajout-annonce</ion-title>
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="#" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="--text-color: #000;">
+      Annonce
+    </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content>
   
-    <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
+    <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
  
   <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
   <!-- <ion-icon class="search" name="search-outline"></ion-icon>
@@ -21,38 +36,35 @@
   <ion-input class="input" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
   --> 
   <ion-label class="label">Selectionner un Annonceur</ion-label>
-  <ion-select class="input" style="color: black;" interface="popover" placeholder="selectionner un annonceur" [(ngModel)]="idannonceur" name="idannonceur" >
+  <ion-select class="input" interface="popover" placeholder="selectionner un annonceur" [(ngModel)]="idannonceur" name="idannonceur" >
     
     <ion-select-option class="input" *ngFor="let idannonceur of ListeAnnonceur" value="{{idannonceur.id}}">{{idannonceur.username}}</ion-select-option>
   </ion-select>
   <ion-card class="css"> 
 
+    <div class="date">
+      <div>
     <ion-label class="label1">Date de Debut</ion-label>
-   <!-- <ion-item>
-    <ion-label></ion-label>
-    <ion-datetime display-format="DD.MM.YYYY HH:mm"></ion-datetime>
-   </ion-item>  -->
-   <ion-input class="input1" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
-    
+    <ion-input class="input1" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
+  </div>
+  <div>
     <ion-label class="label2" >Date de Fin</ion-label>
     <ion-input class="input2" [(ngModel)]="dateFin" name="dateFin" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
-    
+  </div>
+  </div>
     <ion-label class="label3">Description de l'annonce</ion-label>
   <ion-input class="input3" [(ngModel)]="descriptionannonce" name="descriptionannonce" type="text" placeholder="Donner la description de votre annonce...."></ion-input>
     <br>
-  
-
-  <br>
     <ion-label class="labimg">Ajouter l'image de l'annonce</ion-label>
     <ion-input class="dowload" type="file"  (change)="recupereImage($event)" name="image">
       <!-- <ion-icon  class="up" name="cloud-upload-outline"></ion-icon> -->
       <!-- <p class="tele">Télécharger un fichier</p> -->
       </ion-input>
-
+<br>
       <ion-list>
         <h1 class="diffusion">Site de Publicité</h1>
         <ion-item class="selct">
-          <ion-select interface="action-sheet" placeholder="Select all fruits that apply" [multiple]="true" [(ngModel)]="idsitepopulaire" name="idsitepopulaire">
+          <ion-select interface="action-sheet" placeholder="Selectionner un site_web" [multiple]="false" [(ngModel)]="idsitepopulaire" name="idsitepopulaire">
             <ion-select-option *ngFor="let listeSite of ListeSite" value="{{listeSite.idsitepopulaire}}">{{listeSite.nomsitepopulaire}}</ion-select-option>
             
           </ion-select>

@@ -1,0 +1,47 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>debut</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="auto" size-xs="12" >
+      <h1>Ki-Lakodon</h1> <br>
+      <ion-slides [options]="slideOpts">
+        <ion-slide style="width: 90% !important;"class="slides">
+          <img class="islide" src="/assets/accueil/image.png" alt=""><br>
+          <p>La Meilleur des plateformes pour vous 
+            <br> Ki-Lakodon
+          </p>
+        </ion-slide>
+        <ion-slide style="width: 90% !important;" class="slides">
+          <img class="islide" src="../../assets/accueil/ia_recherche.jpg" alt="">
+        </ion-slide>
+        <ion-slide style="width: 100% !important;" class="slides">
+          <img class="islide" src="../../assets/accueil/35-crm.jpg" alt=""><br>
+          <p style="margin: auto; display: flex; 
+              align-items: center;
+              margin: auto;
+              display: flex;
+              margin-left: 65px;
+              margin-top: 5px;">Venez découvrir 
+            <br>Ki-Lakodon
+          </p>
+        </ion-slide>
+      </ion-slides>
+      <!-- <img class="container" src="assets\logo-removebg-preview.png" alt="">  -->
+      <div style="display: flex;
+      justify-content: space-between;">
+        <ion-button expand="block" routerLink="/connexion" class="sign">Connectez-Vous</ion-button>
+        <br>
+        <ion-button expand="block" color="sucess" class="sign" routerLink="/signup">Inscrivez-Vous</ion-button>
+      </div>
+      <br>
+      <ion-button expand="block" routerLink="/tabs/home">Visitez Ki-Lakodon</ion-button>
+    
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

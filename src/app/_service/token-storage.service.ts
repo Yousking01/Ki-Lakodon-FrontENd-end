@@ -19,7 +19,7 @@ export class TokenStorageService {
   //Fatou tutto
   saveToken(token: string): void{
     localStorage.setItem('token', token)
-    this.router.navigate(['/tabs/dashboard']);
+    this.router.navigate(['/tabs/home']);
   }
   isLogged(): boolean{
     const token = localStorage.getItem('token')

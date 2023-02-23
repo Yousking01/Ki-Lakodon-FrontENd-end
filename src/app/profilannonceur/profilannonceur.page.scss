@@ -41,16 +41,13 @@ ion-content {
   color: #000000;
   }
   .CSS{
-    /*margin-left: -2px; */
-    /* display: flex; */
+    border-top-left-radius: 50px;
     --background: rgb(255, 255, 255);
     width: 100%;
     margin: auto;
-    border-radius: 50px;
-    /* position: relative; */
+    /* border-radius: 50px; */
     margin-top: -60px;
-    /* justify-content: center; */
-    /* align-items: center;*/
+    border-top-right-radius: 50px;
   }
   .icionUser{
     position: relative;
@@ -166,23 +163,20 @@ ion-content {
   // margin: auto;
 }
 .pp{
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  /* identical to box height, or 133% */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.25px;
-
-  color: #8A8A8A;
-  position: relative;
-  top: 35px;
-  position: relative;
-  justify-content: center;
+  margin-top: -20px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* letter-spacing: 0.25px; */
+    color: #8A8A8A;
+    /* position: relative; */
+    /* position: relative; */
+    justify-content: center;
 }
 .heart{
   color: #000000;
@@ -309,7 +303,8 @@ ion-badge{
     color: #1B2236;
 }
 .ppp{
-  font-family: "Roboto";
+  display: flex;
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -320,31 +315,32 @@ ion-badge{
     border-radius: 12px;
     width: 40%;
     height: auto;
+    /* margin: auto; */
+    /* position: relative; */
+    /* top: -70px; */
+    justify-content: center;
     margin: auto;
-    /* display: flex; */
-    position: relative;
-    top: -70px;
+    margin-top: -30px;
 
 }
 .Capital{
 
-  font-family: 'Poppins';
+  margin-bottom: 5px;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
   line-height: 16px;
-  /* or 64% */
-
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.25px;
   text-decoration-line: underline;
-
   color: #1B2236;
   justify-content: center;
   position: relative;
-  top: -40px;
+  /* top: -40px; */
+  margin-top: -12px;
 
 }
 .somme{
@@ -420,9 +416,7 @@ ion-badge{
     letter-spacing: 0.25px;
     text-decoration-line: underline;
     color: #000000;
-    /* position: relative; */
-    /* top: -45px; */
-    margin-top: -30px;
+    margin-top: 30px;
 }
 
 .img1{

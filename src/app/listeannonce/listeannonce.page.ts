@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonModal, PopoverController } from '@ionic/angular';
+import { AlertController, IonModal, PopoverController } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 
 import { AjoutServiceService } from '../_service/ajout-service.service';
+import { TokenStorageService } from '../_service/token-storage.service';
 
 @Component({
   selector: 'app-listeannonce',
@@ -12,8 +13,8 @@ import { AjoutServiceService } from '../_service/ajout-service.service';
 export class ListeannoncePage implements OnInit {
 
   //REFRESH PAGE
-  datetime:string=new Date().toISOString().split("T")
-  [0]+ ""+new Date().toTimeString().split("GMT")[0].trim();
+  // datetime:string=new Date().toISOString().split("T")
+  // [0]+ ""+new Date().toTimeString().split("GMT")[0].trim();
 
   //Declaration Des VARIABLES POUR L'AJOUT ANNONCE
   // titreannonce : string="";
@@ -28,7 +29,7 @@ export class ListeannoncePage implements OnInit {
   ListeAnnonceur:any;
   ListeSite: any;
   ListeAnnonce: any
-  constructor(private ajouteservice : AjoutServiceService,  private pvrCtlr: PopoverController) { }
+  constructor(private ajouteservice : AjoutServiceService,private tokenStorage: TokenStorageService,  private pvrCtlr: PopoverController,private alertController: AlertController) { }
 
   ngOnInit() {
     //Recuperation de l'annonce
@@ -44,20 +45,20 @@ export class ListeannoncePage implements OnInit {
     })
   }
 
-  //REFRESH PAGE
-  methodForPullDownRefresh(event: any)
-   {
-    setTimeout(()=>{
-      this.datetime = new Date().toISOString().split
-      ("T")[0]+ ""+new Date().toTimeString().split
-      ("GMT")[0].trim();
-      event.target.complete();
-    },2000)
-  }
-  //reload Page
-  reloadPage() {
-    window.location.reload();
-  }
+  // //REFRESH PAGE
+  // methodForPullDownRefresh(event: any)
+  //  {
+  //   setTimeout(()=>{
+  //     this.datetime = new Date().toISOString().split
+  //     ("T")[0]+ ""+new Date().toTimeString().split
+  //     ("GMT")[0].trim();
+  //     event.target.complete();
+  //   },2000)
+  // }
+  // //reload Page
+  // reloadPage() {
+  //   window.location.reload();
+  // }
   // handleRefresh(event:any) {
   //   setTimeout(() => {
   //     
@@ -69,18 +70,51 @@ export class ListeannoncePage implements OnInit {
   recupereImage(event:any){
     this.image = event.target["files"][0];
     console.log(this.image)
+  };
+  logout(): void{
+    this.tokenStorage.clearToken();
+    this.tokenStorage.clearToken();
   }
 
   //METHODE PERMETTANT DE SUPRIMER UNE ANNONCE AVEC ID
-  suprimerannonce(idanonne: number){
+  async suprimerannonce(idanonne: number){
     this.ajouteservice.suprimerannonce(idanonne).subscribe(data => {
       console.log(data);
     })
+    // this.showDeleteSuccessPopup();
+     // Affichage d'un message de confirmation
+    const alert = await this.alertController.create({
+      header: 'Suppression réussie',
+      message: 'Votre élément a été supprimé avec succès.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
+  // Attente de 2 secondes
+  setTimeout(() => {
+    // Rechargement de la page
+    window.location.reload();
+  }, 3000);
+
+
   }
+  ////////POP-UP suprimer avec success
+  // async showDeleteSuccessPopup() {
+  //   const alert = await this.alertController.create({
+  //     header: 'Suppression réussie',
+  //     message: 'Votre élément a été supprimé avec succès.',
+  //     buttons: ['OK']
+  //   });
+  
+  //   await alert.present();
+  // }
+
+
   @ViewChild(IonModal)
   modal!: IonModal;
 
-  message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
+  message = 'Veilliez remplir tout les champ pour une bonne modification !!!';
   // name: string;
   titreannonce : string="";
   descriptionannonce : string= "";
@@ -135,6 +169,36 @@ export class ListeannoncePage implements OnInit {
   modifierannonce(idannonce:number){
     this.ajouteservice.modifierannonce(this.titreannonce,this.descriptionannonce,this.budgetannonce,this.image,this.dateDebut,this.dateFin,idannonce).subscribe(data =>{
       console.log(data);
-    })
+     
+    });
+     // Appel de la méthode de modification réussie
+    //  this.showEditSuccessPopup();
+    // Affichage d'un message de confirmation
+    // const alert = await this.alertController.create({
+    //   header: 'Modification réussie',
+    //   message: 'Votre modification a été enregistrée avec succès.',
+    //   buttons: ['OK']
+    // });
+
+    // await alert.present();
+
+    // setTimeout(()=>{
+    //   // // Rechargement de la page
+    // // window.location.reload();
+    // },3000)
+    
+  
+  
+
   }
+  ///////////////POP-UP de modification
+  // async showEditSuccessPopup() {
+  //   const alert = await this.alertController.create({
+  //     header: 'Modification réussie',
+  //     message: 'Votre modification a été enregistrée avec succès.',
+  //     buttons: ['OK']
+  //   });
+  
+  //   await alert.present();
+  // }
 }

@@ -16,6 +16,7 @@ import { TokenInterceptorProvider } from './_helpers/token.interceptor';
 import { Camera } from '@awesome-cordova-plugins/camera/ngx';
 // import { Camera, CameraResultType } from '@capacitor/camera';
 import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
+// import { DebutPipe } from './debut.pipe';
 
 
 @NgModule({

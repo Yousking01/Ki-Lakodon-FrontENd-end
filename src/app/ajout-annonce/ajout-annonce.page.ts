@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AjoutServiceService } from '../_service/ajout-service.service';
+import { TokenStorageService } from '../_service/token-storage.service';
 
 @Component({
   selector: 'app-ajout-annonce',
@@ -23,7 +24,7 @@ export class AjoutAnnoncePage implements OnInit {
   ListeSite: any;
 
 
-  constructor( private ajouteservice : AjoutServiceService) { }
+  constructor( private ajouteservice : AjoutServiceService, private tokenStorage: TokenStorageService) { }
 
   ngOnInit() {
     this.ajouteservice.listAnnoncuer().subscribe(data =>{
@@ -66,5 +67,9 @@ export class AjoutAnnoncePage implements OnInit {
     this.ajouteservice.modifierannonce(this.titreannonce,this.descriptionannonce,this.budgetannonce,this.image,this.dateDebut,this.dateFin,this.idannonce).subscribe(data =>{
       console.log(data);
     })
+  }
+   logout(): void{
+    this.tokenStorage.clearToken();
+    this.tokenStorage.clearToken();
   }
 }

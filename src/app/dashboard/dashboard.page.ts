@@ -5,6 +5,7 @@ import { AjoutServiceService } from '../_service/ajout-service.service';
 import { AjoutsiteService } from '../_service/ajoutsite.service';
 import { TokenStorageService } from '../_service/token-storage.service';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -14,6 +15,7 @@ export class DashboardPage implements OnInit {
 
   ListeAnnonceur:any;
   ListeSite: any;
+  ListeAnnonce: any;
   slideOpts = {
     
     speed: 400,
@@ -24,7 +26,7 @@ export class DashboardPage implements OnInit {
   };
 
 
-  constructor(private toastCtrl: ToastController,private pvrc:PopoverController, private tokenStorage: TokenStorageService, private ajouteservice : AjoutServiceService,private ajoutsiteService : AjoutsiteService) { }
+  constructor(private router: Router,private toastCtrl: ToastController,private pvrc:PopoverController, private tokenStorage: TokenStorageService, private ajouteservice : AjoutServiceService,private ajoutsiteService : AjoutsiteService,) { }
 
   ngOnInit() {
 
@@ -35,6 +37,11 @@ export class DashboardPage implements OnInit {
 
     this.ajoutsiteService.listSite().subscribe(data =>{
       this.ListeSite = data;
+      console.log(data);
+    });
+     //Recuperation de l'annonce
+     this.ajouteservice.listeAnnonce().subscribe(data => {
+      this.ListeAnnonce = data;
       console.log(data);
     });
   }
@@ -48,6 +55,7 @@ export class DashboardPage implements OnInit {
   logout(): void{
     this.tokenStorage.clearToken();
     this.tokenStorage.clearToken();
+    // this.router.navigate(['/connexion']);
   }
   async voir(){
     let toast = await this.toastCtrl.create({

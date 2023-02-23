@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenStorageService } from '../_service/token-storage.service';
 
 @Component({
   selector: 'app-formulaire',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormulairePage implements OnInit {
 
-  constructor() { }
+  constructor(private tokenStorage: TokenStorageService,) { }
 
   ngOnInit() {
   }
@@ -16,5 +17,9 @@ export class FormulairePage implements OnInit {
     //reload Page
     reloadPage() {
       window.location.reload();
+    }
+    logout(): void{
+      this.tokenStorage.clearToken();
+      this.tokenStorage.clearToken();
     }
 }

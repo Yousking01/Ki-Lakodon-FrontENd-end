@@ -189,13 +189,20 @@ ion-content {
   margin: auto;
     width: 260px;
     height: 195px;
-    margin-top: 5px;
+    margin-top: 12px;
     padding-left: 10px;
     padding-right: 10px;
-    /* position: relative; */
-    /* left: 5px; */
     border-radius: 20px;
-    /* display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 184%;
+    text-decoration-line: underline;
+    color: #29B6F6;
+    align-items: center;
 }
 .liste{
   margin-left: -10px;

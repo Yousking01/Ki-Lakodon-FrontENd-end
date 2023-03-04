@@ -8,126 +8,125 @@
   <br>
   <img src="../../assets/Kilakodon 2.png" alt="">
   <h1>S'enregistrer</h1>
-  <br>
+  <!-- <br> -->
   <p class="Connectez">Connectez-vous à votre compte</p>
-  <div id="#header">
-    <br>
-  <img 
-   
-      id="profile-img"
-      src="../../assets/Ki-lakodon 1.png"
-      class="profile-img-card"
-    />
-  </div>
-<!-- <ion-input type="file"></ion-input> -->
-    <form id="#form"
-      *ngIf="!isSuccessful"
-      name="form"
-      (ngSubmit)="f.form.valid && addinscription()"
-      #f="ngForm"
-      novalidate
-    >
-   <!-- <ion-label >Nom d'utilisateur</ion-label> -->
-   <ion-input placeholder="Nom d'utilisateur"  
-   type="text" name="username" [(ngModel)]="form.username" required maxlength="20"
-              #username="ngModel" [ngClass]="{ 'is-invalid': f.submitted && username.errors }"></ion-input>
-              <div class="invalid-feedback" *ngIf="username.errors && f.submitted">
-                <div  style="color: red;">Le nom est obligatoire!</div>
-                <div  style="color: red;">
-                  Le nom d'utilisateur ne doit pas depasser 20 caracters
-                </div>
-              </div>
-              <!-- <div class="alert-danger" *ngIf="f.submitted && username.invalid">
-            <div *ngIf="username.errors['required']">Le nom d'utilisateur est requis</div>
-            <div *ngIf="username.errors.minlength">
-              Le nom d'utilisateur doit comporter au moins 3 caractères
-            </div>
-            <div *ngIf="username.errors.maxlength">
-              Le nom d'utilisateur doit comporter au plus 20 caractères
-            </div>
-          </div> -->
-
- 
-   <!-- <ion-label>Email</ion-label> -->
-   <ion-input type="email" placeholder="Email" 
-   type="email"
-          class="form-control"
-          name="email"
-          [(ngModel)]="form.email"
-          required
-          email
-          #email="ngModel"></ion-input>
-
-          <div class="alert-danger" *ngIf="f.submitted && email.invalid">
-            <div *ngIf="f.submitted && email.invalid">L'e-mail est requis</div>
-            <div *ngIf="f.submitted && email.invalid">
-              L'e-mail doit être une adresse e-mail valide
-            </div>
-          </div>
-        
-
-   <!-- <ion-label>Mot de passe</ion-label> -->
-   <ion-input type="password" placeholder="Mot de passe"
-   type="password"
-          class="form-control"
-          name="password"
-          [(ngModel)]="form.password"
-          required
-          minlength="8"
-          #password="ngModel"
-   ></ion-input>
-
-   <div class="alert-danger" *ngIf="f.submitted && password.invalid">
-    <div *ngIf="f.submitted && password.invalid">Mot de passe requis</div>
-    <div *ngIf="f.submitted && password.invalid">
-      Le mot de passe doit être au moins de 6 caractères
-    </div>
-  </div>
-
-   <!-- <ion-label>Confirmer mot de passe</ion-label> -->
-   <ion-input type="password" placeholder="Confirmer mot de passe"
-   type="password"
-          class="form-control"
-          name="confirmpassword"
-          [(ngModel)]="form.confirmpassword"
-          required
-          minlength="8"
-          #password="ngModel"
-   ></ion-input>
-   <div class="alert-danger" *ngIf="f.submitted && password.invalid">
-    <div *ngIf="f.submitted && password.invalid">Mot de passe requis</div>
-    <div *ngIf="f.submitted && password.errors">
-      Le mot de passe doit être au moins de 6 caractères
-    </div>
-  </div>
+  
+<ion-card class="principale animated bounceInDown">
+  <ion-back-button defaultHref="/rolegestion" class="backbutton" color="primary"></ion-back-button>
   <br>
-    <ion-list class="liste">
-      <ion-item class="selection">
-        <ion-select interface="action-sheet" placeholder="Type de compte" [(ngModel)]="form.role" name="role">
-          <ion-select-option  *ngFor="let listerole of Listerole" value="{{listerole.name}}" >{{listerole.name}}</ion-select-option>
-          <!-- <ion-select-option value="oranges">Oranges</ion-select-option>
-          <ion-select-option value="bananas">Bananas</ion-select-option> -->
-        </ion-select>
-      </ion-item>
-    </ion-list>
-    <br>
-   <!-- <ion-button class="mpo" fill="clear">Mot de passe oublié ?</ion-button> -->
- 
-   <ion-button class="connexion" expand="block" shape="round" type="submit">Connexion</ion-button>
-
-   <br><!-- <p class="compte">Vous n'avez pas de compte ?</p> -->
+<form id="form"
+  *ngIf="!isSuccessful"
+  name="form"
+  (ngSubmit)="f.form.valid && addinscription()"
+  #f="ngForm"
+  novalidate>
+   <!-- <ion-label  position="floating" >Nom d'utilisateur</ion-label> -->
+   <ion-input class="input3" placeholder="Nom d'utilisateur"  
+    type="text" 
+    name="username" 
+    [(ngModel)]="form.username" 
+    required 
+    maxlength="20"
+    #username="ngModel" 
+    [ngClass]="{ 'is-invalid': f.submitted && username.invalid }">
+  </ion-input>
+  <div class="invalid-feedback" *ngIf="username.errors && f.submitted">
+    <div style="color: red;">Le nom est obligatoire!</div>
+    <div style="color: red;">
+      Le nom d'utilisateur ne doit pas dépasser 20 caractères.
+    </div>
+  </div>
+ <!-- <ion-label position="floating">Email</ion-label> -->
+   <ion-input class="input3" type="email" placeholder="Email" 
+    name="email"
+    [(ngModel)]="form.email"
+    required
+    email
+    #email="ngModel" 
+    [ngClass]="{ 'is-invalid': f.submitted && email.invalid }">
+  </ion-input>
+  <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
+    <div style="color: red;">L'e-mail est requis!</div>
+    <div style="color: red;">L'e-mail doit être une adresse e-mail valide!</div>
+  </div>
+   <!-- <ion-label>Mot de passe</ion-label> -->
+   <ion-input class="input3" type="password" placeholder="Mot de passe"
+   name="password"
+   [(ngModel)]="form.password"
+   required
+   minlength="8"
+   #password="ngModel"
+   [ngClass]="{ 'is-invalid': f.submitted && password.invalid }">
+ </ion-input>
+ <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
+   <div style="color: red;">Le mot de passe est requis!</div>
+   <div style="color: red;">Le mot de passe doit comporter au moins 8 caractères!</div>
+ </div>
+   <!-- <ion-label>Confirmer mot de passe</ion-label> -->
+   <ion-input class="input3" type="password" placeholder="Confirmer mot de passe"
+    name="confirmpassword"
+    [(ngModel)]="form.confirmpassword"
+    required
+    minlength="8"
+    #confirmpassword="ngModel"
+    [ngClass]="{ 'is-invalid': f.submitted && confirmpassword.invalid }">
+  </ion-input>
+  <ion-list class="liste">
+    <ion-item class="selection">
+      <!-- <ion-select interface="action-sheet" placeholder="Type de compte" name="role" [(ngModel)]="role" (ionChange)="onRoleSelect($event)"></ion-select> -->
+      <ion-select interface="action-sheet" placeholder="Type de compte" name="role" [(ngModel)]="role" (ionChange)="onRoleSelect($event)">
+        <ng-container *ngFor="let role of Listerole">
+          <ion-select-option [value]="role.name" *ngIf="role.name !== 'ROLE_ADMIN' && role.name !== 'ROLE_USER'">{{role.name}}</ion-select-option>
+        </ng-container>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <div class="invalid-feedback" *ngIf="confirmpassword.errors && f.submitted">
+    <div style="color: red;">La confirmation du mot de passe est requise!</div>
+    <div style="color: red;">Le mot de passe doit comporter au moins 8 caractères!</div>
+  </div>
+  <!-- <ion-button class="mpo" fill="clear">Mot de passe oublié ?</ion-button> -->
+ <br><!-- <p class="compte">Vous n'avez pas de compte ?</p> -->
     <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
       L'inscription a échoué !<br />{{ errorMessage }}
     </div>
-    
-   <ion-button class="creer" slot="end" fill="clear" routerLink="/connexion" >Vous avez déjà un compte ?<br>
-    Connexion</ion-button>
-     <br>
+ <!-- affchichage des champs de saisie du site -->
+    <!-- <div *ngIf="role === '2'" class="divR">
+      <br> -->
+      <!-- <ion-label class="label31" position="floating">Nom</ion-label> -->
+      <!-- <ion-input class="input3" [(ngModel)]="nomsitepopulaire" name="nomsitepopulaire" type="text" required placeholder="Veuillez donner le nom de votre site"></ion-input>
+      <br> -->
+      <!-- <ion-label class="label31" position="floating">URL</ion-label> -->
+      <!-- <ion-input class="input3" required [(ngModel)]="URL" name="URL" type="url" placeholder="Veuillez donner l'URL de votre site..."></ion-input>
+      <br> -->
+      <!-- <h1 class="diffusion">Ajouter des fichiers pour plus d'informations sur le site</h1> -->
+      <!-- <br>
+      <ion-input class="input3 dowload" required type="file" (change)="recupereImage($event)" name="image"></ion-input>
+      <br>
+    </div> -->
+  <!-- affichage des champs pour l'Annonceur -->
+  <!-- <div *ngIf="role === '3'" class="divR">
+    <br> -->
+    <!-- <ion-label class="label31" position="floating">Adresse de l'annonceur</ion-label> -->
+    <!-- <ion-input class="input3" required [(ngModel)]="adrresseannonceur" name="adrresseannonceur" type="text" placeholder="Veuillez donner votre adresse"></ion-input>
+    <br> -->
+    <!-- <ion-label class="label31" position="floating">Téléphone</ion-label> -->
+    <!-- <ion-input class="input3" required [(ngModel)]="numeroannonceur" name="numeroannonceur" type="tel" placeholder="Téléphone..."></ion-input>
+    <br>
+    <br>
+    <ion-label class="label31" position="floating">Votre budget :</ion-label>
+    <ion-input class="input3" required [(ngModel)]="budgetannonceur" name="budgetannonceur" type="number" placeholder="Votre budget..."></ion-input>
+    <br>
+  </div> -->
+  <ion-button class="connexion" expand="block" shape="round" type="submit" (click)="addinscription()">Connexion</ion-button>
+<br>
+<p class="creer" slot="end" fill="clear" routerLink="/connexion">Vous n'avez pas encore de compte ? <br> Inscrivez-vous</p>
     </form>
  <br>
-    <a href="#"><ion-icon slot="start" name="logo-google" class="google"></ion-icon></a> 
+</ion-card>
+    <!-- <a href="#"><ion-icon slot="start" name="logo-google" class="google"></ion-icon></a> 
     <a href="#"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a> 
-    <a href="#"><ion-icon name="logo-github" class="github"></ion-icon></a>
+    <a href="#"><ion-icon name="logo-github" class="github"></ion-icon></a> -->
  
  
  </ion-content>

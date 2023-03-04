@@ -54,8 +54,8 @@ export class DashboardPage implements OnInit {
 
   logout(): void{
     this.tokenStorage.clearToken();
-    this.tokenStorage.clearToken();
-    // this.router.navigate(['/connexion']);
+    // this.tokenStorage.clearToken();
+    this.router.navigate(['/connexion']);
   }
   async voir(){
     let toast = await this.toastCtrl.create({

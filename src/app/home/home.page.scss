@@ -521,6 +521,22 @@ ion-content {
     border-bottom-left-radius: 75px;
     
   }
+  .retext{
+    text-align: center;
+    font-size: 18px;
+    color: #29B6F6;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .recuperer{
+    justify-content: center;
+    display: flex;
+    width: 60%;
+    background-color: #fff;
+    margin: auto;
+    margin-top: -2%;
+  }
   .annonce{
     text-align: center;
     position: absolute;

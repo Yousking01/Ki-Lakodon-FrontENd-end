@@ -90,6 +90,18 @@ const routes: Routes = [
     path: 'debut',
     loadChildren: () => import('./debut/debut.module').then( m => m.DebutPageModule)
   },
+  {
+    path: 'rolegestion',
+    loadChildren: () => import('./rolegestion/rolegestion.module').then( m => m.RolegestionPageModule)
+  },
+  {
+    path: 'recuperer-annonce',
+    loadChildren: () => import('./recuperer-annonce/recuperer-annonce.module').then( m => m.RecupererAnnoncePageModule)
+  },
+  {
+    path: 'ajout-annonceur',
+    loadChildren: () => import('./ajout-annonceur/ajout-annonceur.module').then( m => m.AjoutAnnonceurPageModule)
+  },
   // {
   //   path: 'debut',
   //   loadChildren: () => import('./debut/debut.module').then( m => m.DebutPageModule)

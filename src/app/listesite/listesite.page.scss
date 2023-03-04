@@ -275,3 +275,71 @@ ion-icon{
   justify-content: flex-end;
   align-items: center;
 }
+.supr{
+  color: red;
+    width: 25px;
+    height: 18px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0%;
+
+}
+.modif{
+  width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: -10%;
+}
+.h{
+  text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 0px;
+    /* margin-left: 5px; */
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.label{
+  margin-top: 0px;
+    font-size: 16px;
+}
+.input{
+  // margin-right: 5px;
+  // margin-left: 5px;
+  width: 90%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border-bottom: 1px solid;
+  color: #181818;
+  display: flex;
+  /* margin: auto; */
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.dowload{
+    width: 90%;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px dashed;
+    color: #2e2b2b;
+    // margin: auto;
+    // border-radius: 10px;
+    height: 12%;
+    margin-top: 5px;
+    box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
+}
+ion-modal{
+  --background-color: #00fffc 45%;
+}

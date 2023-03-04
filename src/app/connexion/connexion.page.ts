@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_service/auth.service';
 import { TokenStorageService } from '../_service/token-storage.service';
 import { ICredential } from '../_interfaces/credential';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 // interface ICredentials{
 //   username : string,
@@ -31,7 +31,7 @@ export class ConnexionPage implements OnInit {
   errorMessage = '';
   roles: string[] = [];
   user: any;
-  constructor(private route: Router, private authService: AuthService, private tokenStorage: TokenStorageService) { }
+  constructor(private router: Router, private route: ActivatedRoute , private authService: AuthService, private tokenStorage: TokenStorageService) { }
 
   ngOnInit() {
 //     if (this.tokenStorage.getToken()) {
@@ -59,7 +59,7 @@ export class ConnexionPage implements OnInit {
           
       },
       err  => console.log(err)
-    )
+    );
     // // console.log("avant methode=================")
     // this.authService.login(this.form).subscribe(
     //   data => {
@@ -79,9 +79,12 @@ export class ConnexionPage implements OnInit {
     // );
   }
 
-   //reload Page
-   reloadPage() {
-    window.location.reload();
-  }
+  //  //reload Page
+  //  reloadPage() {
+  //   window.location.reload();
+  // }
 
+  inscription(){
+    this.router.navigate(['/inscription']);
+  }
 }

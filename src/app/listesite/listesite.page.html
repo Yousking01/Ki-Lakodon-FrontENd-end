@@ -48,10 +48,69 @@
 </ion-card>  <br>
 <p class="liste">Liste des sites Populaire</p>
 
-<ion-card class="card5" *ngFor="let listSite of ListeSite">
-  <a class="nomsite" routerLink="/tabs/profilsite/{{listSite.idsitepopulaire}}">{{listSite.nomsitepopulaire}}</a> 
-  <a routerLink="/tabs/profilsite/{{listSite.idsitepopulaire}}"> <img class="image" src="../../assets/{{listSite.image}}" alt=""></a>
+<ion-card class="card5" *ngFor="let site of ListeSite">
+  <ion-icon name="trash-outline" slot="" class="supr"  (click)="suprimersite(site.id)"></ion-icon>
+  <br>
+  <ion-icon name="create-outline"  id="open-modal" class="modif"  slot=""></ion-icon>
+  <a class="nomsite" routerLink="/tabs/profilsite/{{site.id}}">{{site.nomsitepopulaire}}</a> 
+  <a routerLink="/tabs/profilsite/{{site.id}}"> <img class="image" src="../../assets/{{site.image}}" alt=""></a>
+
+<ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button style="font-size: 10px;" (click)="cancel()">Retour</ion-button>
+        </ion-buttons>
+        <ion-title style="font-size: 10px;">Modifier votre Annonces</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="modifiersite(site.idsitepopulaire)" [strong]="true" style="font-size: 10px;">Confirmer</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding" style="--background-color: #00fffc 45%;">
+      <!-- <ion-item> -->
+        <h1 class="h">Remplis le formulaire pour l'ajout <br> de votre site</h1>
+  <ion-label class="label">Nom</ion-label>
+  <ion-input class="input"  [(ngModel)]="nomsitepopulaire" name="nomsitepopulaire" type="text" placeholder="Veiller donner le nom de votre Site"></ion-input>
+        <!-- <ion-select class="label" interface="popover" placeholder="selectionner un annonceur" [(ngModel)]="idannonceur" name="idannonceur" >
+          <ion-select-option class="input" *ngFor="let idannonceur of ListeAnnonceur" value="{{idannonceur.id}}">{{idannonceur.username}}</ion-select-option>
+        </ion-select> -->
+
+        <ion-label class="label">URL</ion-label>
+        <ion-input class="input" [(ngModel)]="URL" name="URL" type="url" placeholder="Veiller donner l'URL de votre site..."></ion-input>
+        <!-- <ion-label class="label2">Date de Fin</ion-label>
+        <ion-input class="input2" [(ngModel)]="dateFin" name="dateFin" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
+         -->
+        <!-- <ion-label class="label3">Description de l'annonce</ion-label>
+        <ion-input class="input3" [(ngModel)]="descriptionannonce" name="descriptionannonce" type="text" placeholder="Donner la description de votre annonce...."></ion-input>
+        <br> -->
+        <!-- <ion-list>
+          <h1 class="diffusion">Site de Publicité</h1>
+          <ion-item>
+            <ion-select placeholder="Select all fruits that apply" [multiple]="true" [(ngModel)]="idsitepopulaire" name="idsitepopulaire">
+              <ion-select-option >{{annonce.siteWebPopulaires[i]?.nomsitepopulaire}}</ion-select-option>
+              
+            </ion-select>
+          </ion-item>
+        </ion-list> -->
+        <ion-label class="label">Le Logo du site</ion-label>
+        <ion-input class="dowload" type="file"  (change)="recupereImage($event)" name="image">
+          <!-- <ion-icon  class="up" name="cloud-upload-outline"></ion-icon> -->
+          <!-- <p class="tele">Télécharger un fichier</p> -->
+          </ion-input>
+          <br>
+            <!-- <ion-label position="stacked">Enter your name</ion-label>
+            <ion-input type="text" placeholder="Your name" [(ngModel)]="name"></ion-input> -->
+          <!-- </ion-item> -->
+      
+      
+    </ion-content>
+  </ng-template>
+</ion-modal>
 </ion-card>
+
+
 
  <!-- <ion-card class="card5">
   <a class="nomsite" href="#">MaliJet</a> 

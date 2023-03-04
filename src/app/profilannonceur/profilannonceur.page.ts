@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
+import { TokenStorageService } from '../_service/token-storage.service';
 
 
 @Component({
@@ -62,7 +64,7 @@ export class ProfilannonceurPage implements OnInit {
     this.barChartType = this.barChartType === 'bar' ? 'line' : 'bar';
   }
 
-  constructor( private http: HttpClient ) {
+  constructor(private router: Router, private route: ActivatedRoute , private tokenStorage: TokenStorageService, private http: HttpClient ) {
     
    }
  
@@ -74,5 +76,11 @@ export class ProfilannonceurPage implements OnInit {
    reloadPage() {
     window.location.reload();
   }
+
+  logout(): void {
+    this.tokenStorage.clearToken();
+    this.router.navigate(['/connexion']);
+  }
+ 
 
 }

@@ -18,12 +18,12 @@
 
     
 
-    <ion-tab-button tab="profilsite/:id">
+    <ion-tab-button tab="profilsite/{{id}}" *ngIf="SitewebR || admin">
       <ion-icon name="desktop"></ion-icon>
       <ion-label>Site_web</ion-label>
     </ion-tab-button>
    
-    <ion-tab-button tab="profilannonceur">
+    <ion-tab-button tab="profilannonceur" *ngIf="annonceurR || admin">
       <ion-icon name="person-circle-outline"></ion-icon>
       <ion-label>Annonceurs</ion-label>
     </ion-tab-button>

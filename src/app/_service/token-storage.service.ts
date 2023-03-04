@@ -40,9 +40,9 @@ export class TokenStorageService {
   clearToken(): void{
     localStorage.removeItem('token'),
     window.sessionStorage.clear(),
-    window.location.reload();
+    // window.location.reload();
     // this.navCtrl.navigateRoot([{clearHistory: true}]);
-      this.router.navigate(['/']);
+      this.router.navigate(['/connexion']);
     
     
   }

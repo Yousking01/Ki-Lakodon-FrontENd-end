@@ -4,15 +4,37 @@
   </ion-toolbar>
 </ion-header> -->
 
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="/listeannonce" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="--text-color: #000;">
+      Liste Annonces
+    </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+
 <ion-content>
   
 
   <div class="header">
     <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
-    <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
+    <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
     <h1>Profil Annonceur</h1>
-    <ion-icon class="icionUser" name="person-outline"></ion-icon>
-    <ion-icon class="iconNotif" name="notifications-outline"></ion-icon>
+    <!-- <ion-icon class="icionUser" name="person-outline"></ion-icon> -->
+    <!-- <ion-icon class="iconNotif" name="notifications-outline"></ion-icon> -->
 
     
   </div>

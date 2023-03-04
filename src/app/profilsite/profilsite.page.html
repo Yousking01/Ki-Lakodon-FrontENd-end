@@ -1,16 +1,51 @@
-<ion-content>
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="">
+    <ion-buttons slot="start" class="menu_btn">
+      <ion-back-button defaultHref="listesite" (click)="closePage()" color="primary"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="closePage()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title style="--text-color: #000;">
+      Liste Annonces
+    </ion-title>
+    <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
+    width: 20px;
+    font-size: 45px;
+    position: relative;
+    margin-right: 30px;
+    color: black;
+    z-index: 111;" ></ion-icon>
+    <ion-badge id="notifications-badge-msg" color="danger">3</ion-badge>
+    <img src="../../assets/logo.PNG" class="imagee" slot="end" alt="" routerLink="/connexion">
+    <ion-icon class="sig1" (click)="logout()" slot="end" name="log-out-outline" ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="ListeSitebyId">
   
 
   <div class="header">
     <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
-    <ion-back-button defaultHref="#" class="ARROW"></ion-back-button>
+    <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
     <h1>Profil Site</h1>
-    <ion-icon class="icionUser" name="person-outline"></ion-icon>
-    <ion-icon class="iconNotif" name="notifications-outline"></ion-icon>
+    <!-- <ion-icon class="icionUser" name="person-outline"></ion-icon> -->
+    <!-- <ion-icon class="iconNotif" name="notifications-outline"></ion-icon> -->
 
     
   </div>
-  <div class="flex" >
+  <!-- <div class="flex" >
+    <div class="border-blue">
+      <div class="border-white">
+        <div class="img-box">
+          <img src="../../assets/{{ListeSitebyId.image}}">
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="flex">
     <div class="border-blue">
       <div class="border-white">
         <div class="img-box">
@@ -19,7 +54,7 @@
       </div>
     </div>
   </div>
-  <ion-card class="CSS"  *ngFor="let listSite of ListeSite">
+  <ion-card class="CSS">
     <br>
     <h2 class="fana">{{ListeSitebyId.nomsitepopulaire}}</h2>
     <br>
@@ -67,17 +102,19 @@
       <!-- <ion-card class="img1"> -->
         <!-- <img  src="../../assets/" alt=""> -->
       <!-- </ion-card> -->
+      <div *ngFor="let listeAnnonce of ListeAnnonceByIdSite" style="width: 100% !important; display: flex; justify-content: center;">
+      <img class="img1"  src="../../assets/{{listeAnnonce.image}}" alt="">
       
-      <img class="img1" *ngFor="let listeAnnonce of annonceSite" src="../../assets/{{listeAnnonce.image}}" alt="">
-      <!-- <img class="img3" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 2.png" alt="">
+    </div>
+    <!-- <img class="img3" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 2.png" alt="">
       <img class="img4" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 3.png" alt="">
       <img class="img5" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 4.png" alt="">
       <img class="img6" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 5.png" alt="">
       <img class="img7" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 6.png" alt="">
      -->
-      <ion-card class="bottom">
+      <!-- <ion-card class="bottom">
 
-      </ion-card>
+      </ion-card> -->
     </ion-card>
 
 

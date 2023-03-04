@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="header">
   <ion-toolbar color="">
     <ion-buttons slot="start" class="menu_btn">
-      <ion-back-button defaultHref="#" color="primary"></ion-back-button>
+      <ion-back-button defaultHref="/debut" color="primary"></ion-back-button>
     </ion-buttons>
     <ion-title style="--text-color: #000;">
       Accueil
@@ -124,14 +124,21 @@
     </ion-slides>
   </div>
   <!-- </div> -->
+  <!-- <br> -->
+  <ion-card class="recuperer" routerLink="/recuperer-annonce">
+    <p class="retext" routerLink="/recuperer-annonce">Récuperer l'Annonces Annoncés</p>
+  </ion-card>
+  <!-- <br> -->
   <div style="width: 100% !important;margin-top: -14px; display: flex; justify-content: center;">
     <ion-card class="card11" *ngIf="annonceurR || admin" routerLink="/ajout-annonce" >
+      <!--  -->
       <img class="annonceimg"  src="../../assets/accueil/annoce.png" alt=""> 
        <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
        <a href="/ajout-annonce.module" class="annonce">Créer votre annonce</a>
     </ion-card>
 
-    <ion-card class="card12"  *ngIf="annonceurR || admin" routerLink="/listeannonce">
+    <ion-card class="card12" *ngIf="annonceurR || admin"  routerLink="/listeannonce">
+      <!--  -->
       <img style="display: flex;
       margin-bottom: 10px;
       width: 70%;
@@ -141,6 +148,7 @@
   </div>
   <div class="div22" style="width: 100% !important; display: flex; justify-content: center;">
   <ion-card class="card13" *ngIf="SitewebR || admin" routerLink="/listesite" >
+    <!--  -->
     <img style="display: flex;
     margin-bottom: 10px;
     width: 70%;
@@ -148,7 +156,8 @@
     <a href="listesite.module" class="annonce">Liste Site_Web</a>
   </ion-card>
 
-  <ion-card class="card14" *ngIf="admin || SitewebR" routerLink="/formulaire" >
+  <ion-card class="card14" *ngIf="admin || SitewebR" routerLink="/ajout-site" >
+    <!--  -->
     <img class="annonceimg"  src="../../assets/accueil/site.png" alt=""> 
     <ion-icon class="point" name="ellipsis-vertical-circle-outline"></ion-icon>
       <a href="ajout-site.module" class="annonce">Ajouter un Site</a>

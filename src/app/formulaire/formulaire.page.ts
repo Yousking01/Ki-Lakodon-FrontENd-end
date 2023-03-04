@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { TokenStorageService } from '../_service/token-storage.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { TokenStorageService } from '../_service/token-storage.service';
 })
 export class FormulairePage implements OnInit {
 
-  constructor(private tokenStorage: TokenStorageService,) { }
+  constructor(private tokenStorage: TokenStorageService,private router: Router, private route: ActivatedRoute ) { }
 
   ngOnInit() {
   }
@@ -18,8 +19,8 @@ export class FormulairePage implements OnInit {
     reloadPage() {
       window.location.reload();
     }
-    logout(): void{
+    logout(): void {
       this.tokenStorage.clearToken();
-      this.tokenStorage.clearToken();
+      this.router.navigate(['/connexion']);
     }
 }

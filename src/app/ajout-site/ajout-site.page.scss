@@ -49,7 +49,10 @@ ion-content {
     margin-right: -20px;
   }
   ion-content{
-    --background:#29B6F6;
+    --background: url('../../assets/accueil/2131169417_1665811819.png') no-repeat center top fixed ;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
   // .ARROW{
   //   color: #fff;
@@ -102,13 +105,10 @@ ion-content {
     top: -1%;
 }
   .css{
-    top: 10px;
-    /* margin-top: 5px; */
+    top: 15%;
+    /* top: 10px; */
     --background: #fff;
     height: 100%;
-    /* border-radius: 50px; */
-    /* top: 1%; */
-    /* margin: auto; */
     width: 100%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -123,7 +123,7 @@ ion-content {
     font-size: 14px;
     line-height: 17px;
 
-    color: #FFFFFF;
+    color: #29B6F6;
   }
 .input{
   width: 90%;
@@ -133,7 +133,7 @@ ion-content {
     font-size: 14px;
     line-height: 17px;
     border-bottom: 1px solid;
-    color: #FFFFFF;
+    color: #29B6F6;
     display: flex;
     margin: auto;
     justify-content: space-around;
@@ -250,19 +250,18 @@ ion-content {
 }
 .input3{
   // border: 0.5px ;
-  box-shadow: 4px 4px 9px rgb(0 0 0 / 40%);
-  width: 90%;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
+    width: 85%;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    // border-bottom: 1px solid;
-    // color: #FFFFFF;
     display: flex;
     margin: auto;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     border-radius: 10px;
+    color: black;
   // font-family: "Inter";
   //   font-style: normal;
   //   font-weight: 500;

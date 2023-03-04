@@ -21,17 +21,12 @@
 
 <ion-content>
   
-    <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
- 
-  <!-- <ion-icon class="ARROW" name="arrow-back-outline"></ion-icon> -->
-  <!-- <ion-icon class="search" name="search-outline"></ion-icon>
-  <ion-icon class="regle" name="options-outline"></ion-icon> -->
   <h1>Remplis le formulaire de publicité</h1>
  
   <ion-label class="label">Nom de l'annonce</ion-label>
   <ion-input class="input" [(ngModel)]="titreannonce" name="titreannonce" type="text" placeholder="Nom de l'annonce"></ion-input>
-  <ion-label class="label">Budget</ion-label>
-   <ion-input class="input" type="number" placeholder="Budget" [(ngModel)]="budgetannonce" name="budgetannonce"></ion-input>
+  <ion-label class="label">Prix :</ion-label>
+   <ion-input class="input" type="number" placeholder="Prix de l'annonce" [(ngModel)]="prixannonce" name="prixannonce"></ion-input>
   <!-- <ion-label class="label">Date</ion-label>
   <ion-input class="input" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
   --> 
@@ -43,13 +38,17 @@
   <ion-card class="css"> 
 
     <div class="date">
-      <div>
-    <ion-label class="label1">Date de Debut</ion-label>
-    <ion-input class="input1" [(ngModel)]="dateDebut" name="dateDebut" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
+  <div>
+    <ion-label class="label1">Date de début</ion-label>
+    <ion-input class="input1" [(ngModel)]="dateDebut" name="dateDebut" type="date" placeholder="Samedi, 30 décembre"></ion-input>
+    <ion-label class="label1">{{ dateDebut | date: 'dd/MM/yyyy' }}</ion-label>
+  <!-- {{ dateDebut | date: 'EEE MMM dd HH:mm:ss zzz yyyy' }} -->
   </div>
   <div>
     <ion-label class="label2" >Date de Fin</ion-label>
     <ion-input class="input2" [(ngModel)]="dateFin" name="dateFin" type="Date" placeholder="Samedi, 30 decembre"></ion-input>
+    <ion-label class="label2">{{ dateFin | date: 'dd/MM/yyyy' }}</ion-label>
+  <!-- {{ dateFin | date: 'EEE MMM dd HH:mm:ss zzz yyyy' }} -->
   </div>
   </div>
     <ion-label class="label3">Description de l'annonce</ion-label>
@@ -64,8 +63,8 @@
       <ion-list>
         <h1 class="diffusion">Site de Publicité</h1>
         <ion-item class="selct">
-          <ion-select interface="action-sheet" placeholder="Selectionner un site_web" [multiple]="false" [(ngModel)]="idsitepopulaire" name="idsitepopulaire">
-            <ion-select-option *ngFor="let listeSite of ListeSite" value="{{listeSite.idsitepopulaire}}">{{listeSite.nomsitepopulaire}}</ion-select-option>
+          <ion-select interface="action-sheet" placeholder="Selectionner un site_web" [multiple]="false"(ionChange)="recupereImag($event)" name="idsitepopulaire">
+            <ion-select-option *ngFor="let listeSite of ListeSite" value="{{listeSite.id}}">{{listeSite.nomsitepopulaire}}</ion-select-option>
             
           </ion-select>
         </ion-item>

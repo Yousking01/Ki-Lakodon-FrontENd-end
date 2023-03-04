@@ -8,7 +8,7 @@
     <ion-buttons slot="start" class="menu_btn">
       <ion-back-button defaultHref="#" color="primary"></ion-back-button>
     </ion-buttons>
-    <ion-title style="--text-color: #000;">Site_Web
+    <ion-title style="--text-color: #000;">Ajout Annonceur
     </ion-title>
     <ion-icon name="notifications-outline" slot="end" style="height: 20px; width: 20px;     height: 20px;
     width: 20px;
@@ -27,7 +27,7 @@
   <!-- <ion-back-button defaultHref="#" class="ARROW"></ion-back-button> -->
   <!-- <ion-icon class="search" name="search-outline"></ion-icon>
   <ion-icon class="regle" name="options-outline"></ion-icon> -->
-  <h1>Remplis le formulaire pour l'ajout <br> de votre site</h1>
+  <h1>Remplis le formulaire pour votre ajout <br>en tant qu'Annonceur</h1>
   
   <!-- <ion-label class="label">Titre</ion-label>
   <ion-input class="input" type="text" placeholder="Titre de l'annonce"></ion-input> -->
@@ -54,29 +54,30 @@
     <ion-label class="label31">Mot de passe</ion-label>
     <ion-input class="input3"  [(ngModel)]="password" name="password" type="text" placeholder="Mot de passe"></ion-input>
     <br>
-    <ion-label class="label31">Nom</ion-label>
-    <ion-input class="input3"  [(ngModel)]="nomsitepopulaire" name="nomsitepopulaire" type="text" placeholder="Veiller donner le nom de votre Site"></ion-input>
+    <ion-label class="label31">Adresse :</ion-label>
+    <ion-input class="input3"  [(ngModel)]="adrresseannonceur" name="adrresseannonceur" type="text" placeholder="Votre adresse"></ion-input>
     <br>
-    <ion-label class="label31">URL</ion-label>
-    <ion-input class="input3" [(ngModel)]="URL" name="URL" type="url" placeholder="Veiller donner l'URL de votre site..."></ion-input>
+    <ion-label class="label31">Téléphone :</ion-label>
+    <ion-input class="input3" [(ngModel)]="numeroannonceur" name="numeroannonceur" type="text" placeholder="Numéro de téléphone"></ion-input>
     <br>
-    <!-- <ion-label class="label3">Description de votre site</ion-label>
-    <ion-input class="input3" type="text" placeholder="Donner la description de votre site...."></ion-input>
+    <ion-label class="label3">Budget :</ion-label>
+    <ion-input class="input3" [(ngModel)]="budgetannonceur" name="budgetannonceur" type="number" placeholder="Votre budget..."></ion-input>
+    <br>
+    <!-- <h1 class="diffusion">Ajouter des fichier pour plus d'information sur le site</h1>
     <br> -->
-    <h1 class="diffusion">Ajouter des fichier pour plus d'information sur le site</h1>
-    <br>
     <!-- <ion-card class="dowload"> -->
       <!-- <ion-icon class="up" name="cloud-upload-outline"></ion-icon>
       <p class="tele">Télécharger un fichier</p> -->
       <!-- </ion-card>  -->
-      <ion-input class="dowload" type="file"  (change)="recupereImage($event)" name="image">
-      </ion-input>
+      <!-- <ion-input class="dowload" type="file"  (change)="recupereImage($event)" name="image">
+      </ion-input> -->
       <br> 
-      <p class="bas">Aider les autres en les diffusant sur votre site et les donnant de bon conseil dans le domaine de l'entreprenariat</p>
+      <!-- <p class="bas">Aider les autres en les diffusant sur votre site et les donnant de bon conseil dans le domaine de l'entreprenariat</p> -->
       
-    <ion-button class="ajouter" color="primary" (click)="ajoutsite()">Ajouter</ion-button>
+    <ion-button class="ajouter" color="primary" (click)="ajoutannonceur()">Ajouter</ion-button>
     <!-- <ion-button class="suprimer" color="danger">Suprimer</ion-button> -->
 
 
   </ion-card>
 </ion-content>
+

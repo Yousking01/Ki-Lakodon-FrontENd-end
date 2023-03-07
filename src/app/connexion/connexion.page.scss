@@ -7,7 +7,7 @@ ion-content {
     margin-right: -20px;
   }
 .tout{
-    --background: #ff14931a;
+    // --background: #ff14931a;
     margin: auto;
 }
 #form{
@@ -27,6 +27,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     
     
 }
@@ -138,14 +139,15 @@ ion-input{
     
 }
 .connexion{
-    padding-left: 30px;
-    padding-right: 30px;
-    height: 48px;
-    font-size: 18px;
-    text-transform: initial;
-    border-radius: 50px;
-    box-shadow: 1px 8px 8px 0px rgb(0 0 0 / 5%);
-    --box-shadow: none;
+  margin-top: 0%;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 48px;
+  font-size: 18px;
+  text-transform: initial;
+  border-radius: 50px;
+  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+  --box-shadow: none;
 }
 .mpo{
     justify-content: end;
@@ -190,17 +192,16 @@ color: #616161;
 // top: -2px;
 // }
 .creer{
-    display: flex;
-    /* margin-top: -15px; */
-    padding-left: 90px;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-    justify-content: space-around;
+  display: flex;
+  padding-left: 80px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  justify-content: space-around;
 }
 ion-icon{
     color: #29B6F6;

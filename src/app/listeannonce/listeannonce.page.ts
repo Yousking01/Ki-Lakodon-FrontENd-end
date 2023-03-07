@@ -31,6 +31,7 @@ export class ListeannoncePage implements OnInit {
   ListeAnnonceur:any;
   ListeSite: any;
   ListeAnnonce: any
+  id:number=0;
   constructor(private router: Router, private route: ActivatedRoute ,private ajouteservice : AjoutServiceService,private tokenStorage: TokenStorageService,  private pvrCtlr: PopoverController,private alertController: AlertController) { }
 
     //REFRESH PAGE
@@ -41,12 +42,20 @@ export class ListeannoncePage implements OnInit {
       }, 2000);
     }
   ngOnInit() {
+    
     //Recuperation de l'annonce
      this.Annonces();
 
     //REcuperation de l'annonceur
       this.Annonceurs();
       // this.doRefresh();
+      this.siteliste();
+  }
+  siteliste(){
+    this.ajouteservice.listSite().subscribe(data =>{
+      this.ListeSite = data;
+      console.log(data);
+    })
   }
 
   Annonceurs(){
@@ -55,6 +64,11 @@ export class ListeannoncePage implements OnInit {
       console.log(data);
     })
   }
+  recupereImag(event:any){
+    console.log(event.target.value)
+    this.id=event.target.value
+    console.log(this.ListeSite)
+   }
 
   Annonces(){
     this.ajouteservice.listeAnnonce().subscribe(data => {

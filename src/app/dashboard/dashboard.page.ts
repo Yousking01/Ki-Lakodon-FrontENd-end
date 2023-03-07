@@ -24,6 +24,8 @@ export class DashboardPage implements OnInit {
  autoplay:true
 
   };
+  ListeannoncebyId: any;
+  idannonce: any;
 
 
   constructor(private router: Router,private toastCtrl: ToastController,private pvrc:PopoverController, private tokenStorage: TokenStorageService, private ajouteservice : AjoutServiceService,private ajoutsiteService : AjoutsiteService,) { }
@@ -44,7 +46,13 @@ export class DashboardPage implements OnInit {
       this.ListeAnnonce = data;
       console.log(data);
     });
+    this.ajouteservice.listeAnnonceById(this.idannonce).subscribe(data =>{
+      console.log("objet trouvee========", this.idannonce);
+      this.ListeannoncebyId = data;
+    })
+  
   }
+
   async openNotification(){
     const popup = await this.pvrc.create({
       component: NotificationComponent

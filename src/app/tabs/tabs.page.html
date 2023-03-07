@@ -2,10 +2,35 @@
 
 <ion-tabs class="tab">
 
-  <ion-tab-bar slot="bottom">
+  <!-- <ion-tab-bar slot="bottom"> -->
 
+    <ion-fab class="accueil" #floatingButton vertical="bottom" horizontal="center" translucent="true">
+      <ion-fab-button tab="home" (click)="goToHome()" style="display: flex;
+      margin-left: 5px;">
+        <ion-icon name="home"></ion-icon>
+        <!-- <ion-label>Accueil</ion-label> -->
+      </ion-fab-button>
+    </ion-fab>
+    <ion-tab-bar slot="bottom" class="ion-no-border">
+      <ion-tab-button tab="dashboard">
+        <ion-icon name="analytics"></ion-icon>
+        <ion-label>Tâche</ion-label>
+      </ion-tab-button>
+      <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg">
+        <!-- <path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="white" fill-rule="evenodd">
+        </path> -->
+      </svg>
 
-  <ion-tab-button tab="home">
+      <ion-buttons class="notificat">
+        <ion-button (click)="opennotif()" >
+          <ion-icon class="not" style="width:30px;height:40px;" name="notifications-outline"></ion-icon>
+          <ion-badge>3</ion-badge>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-tab-bar>
+  </ion-tabs>
+      <!-- <ion-tab-button tab="home">
         <ion-icon name="home"></ion-icon>
         <ion-label>Accueil</ion-label>
       </ion-tab-button>
@@ -14,11 +39,11 @@
     <ion-tab-button tab="dashboard">
       <ion-icon name="analytics"></ion-icon>
       <ion-label>Tâche</ion-label>
-    </ion-tab-button>
+    </ion-tab-button> -->
 
     
 
-    <ion-tab-button tab="profilsite/{{id}}" *ngIf="SitewebR || admin">
+    <!-- <ion-tab-button tab="profilsite/{{id}}" *ngIf="SitewebR || admin">
       <ion-icon name="desktop"></ion-icon>
       <ion-label>Site_web</ion-label>
     </ion-tab-button>
@@ -27,14 +52,23 @@
       <ion-icon name="person-circle-outline"></ion-icon>
       <ion-label>Annonceurs</ion-label>
     </ion-tab-button>
+  
+    <ion-tabs>
+    
+      <!-- <ion-tab-button tab="forum" class="notifs">
+        <ion-icon name="bookmark-outline"></ion-icon>
+        <ion-badge></ion-badge>
+      </ion-tab-button> -->
+      
 
-    <ion-buttons>
+
+    <!-- <ion-buttons>
       <ion-button (click)="opennotif()" >
         <ion-icon class="not" style="width:30px;height:40px;" name="notifications-outline"></ion-icon>
         <ion-badge>3</ion-badge>
       </ion-button>
-    </ion-buttons>
+    </ion-buttons> -->
 
-  </ion-tab-bar>
+  <!-- </ion-tab-bar> -->
 
-</ion-tabs>
+<!-- </ion-tabs> -->

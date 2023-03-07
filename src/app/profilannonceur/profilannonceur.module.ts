@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProfilannonceurPageRoutingModule } from './profilannonceur-routing.module';
 
 import { ProfilannonceurPage } from './profilannonceur.page';
-import { NgChartsModule } from 'ng2-charts';
+// import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({

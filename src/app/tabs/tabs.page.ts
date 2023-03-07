@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
 import { NotificationComponent } from '../notification/notification.component';
 import { TokenStorageService } from '../_service/token-storage.service';
@@ -18,7 +19,7 @@ export class TabsPage {
   role:string []=[];
   id: any;
 
-  constructor(private tokenStorage: TokenStorageService, private pvrCtlr: PopoverController) {}
+  constructor(private router: Router, private route: ActivatedRoute, private tokenStorage: TokenStorageService, private pvrCtlr: PopoverController) {}
   async opennotif() {
     const popup = await this.pvrCtlr.create({
       component: NotificationComponent,
@@ -50,5 +51,9 @@ export class TabsPage {
     //reload Page
     reloadPage() {
       window.location.reload();
+    }
+    goToHome(){
+      // this.router.navigate(['/connexion']);
+      this.router.navigate(['/tabs/home']);
     }
 }

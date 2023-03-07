@@ -48,9 +48,10 @@
     </div>
   </div>
   <br>
-  <ion-card class="CSS">
-    <h2 class="fana">Fana-Shop</h2> <br>
-    <p class="pp">Vente des prêts à porter</p>
+  <ion-card class="CSS" *ngIf="ListeannoncebyId">
+    <h2 class="fana">{{ListeannoncebyId.annonceur.username}}</h2><br>
+    <p class="pp">Adresse: {{ListeannoncebyId.annonceur.adrresseannonceur}} <br>
+    Téléphone: {{ListeannoncebyId.annonceur.numeroannonceur}}</p>
     
       <!-- <ion-icon class="heart" name="heart-outline"></ion-icon>
       <p class="jaime">J'aime</p>
@@ -62,9 +63,9 @@
       
   <br>
     <p class="ppp">Entreprise <br> personnel</p> <br>
-    <p class="Capital">Capital:
+    <p class="Capital">Budget:
       <br><br>
-      234.567$
+      {{ListeannoncebyId.annonceur.budgetannonceur}}
     </p> 
     
       <!-- <p class="stat">Statistiques</p> -->
@@ -94,8 +95,9 @@
       <!-- <ion-card class="img1"> -->
         <!-- <img  src="../../assets/" alt=""> -->
       <!-- </ion-card> -->
-      
-      <img class="img1" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 1.png" alt="" >
+      <div >
+      <img class="img1" src="../../assets/{{ListeannoncebyId.image}}" alt="" >
+      </div>
       <!-- <img class="img3" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 2.png" alt="">
       <img class="img4" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 3.png" alt="">
       <img class="img5" src="../../assets/mediamodifier-JskqEILt-ds-unsplash 4.png" alt="">

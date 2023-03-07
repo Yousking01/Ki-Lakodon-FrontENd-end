@@ -45,33 +45,32 @@
     <ion-label class="label21">Publications</ion-label>
     <ion-input class="input21" type="number" placeholder="">1.6K</ion-input> -->
     <br>
-    <ion-label class="label31">Nom Annonceur</ion-label>
+    <ion-label class="label31">Nom Propriétaire</ion-label>
     <ion-input class="input3"  [(ngModel)]="username" name="username" type="text" placeholder="Veiller donner votre nom"></ion-input>
-    <br>
-    <ion-label class="label31">Email Annonceur</ion-label>
+    
+    <ion-label class="label31">Email Site Web</ion-label>
     <ion-input class="input3"  [(ngModel)]="email" name="email" type="text" placeholder="Veiller donner le nom de votre email"></ion-input>
-    <br>
+    
     <ion-label class="label31">Mot de passe</ion-label>
     <ion-input class="input3"  [(ngModel)]="password" name="password" type="text" placeholder="Mot de passe"></ion-input>
-    <br>
-    <ion-label class="label31">Nom</ion-label>
+    
+    <ion-label class="label31">Nom du site</ion-label>
     <ion-input class="input3"  [(ngModel)]="nomsitepopulaire" name="nomsitepopulaire" type="text" placeholder="Veiller donner le nom de votre Site"></ion-input>
-    <br>
+    
     <ion-label class="label31">URL</ion-label>
     <ion-input class="input3" [(ngModel)]="URL" name="URL" type="url" placeholder="Veiller donner l'URL de votre site..."></ion-input>
-    <br>
     <!-- <ion-label class="label3">Description de votre site</ion-label>
     <ion-input class="input3" type="text" placeholder="Donner la description de votre site...."></ion-input>
     <br> -->
     <h1 class="diffusion">Ajouter des fichier pour plus d'information sur le site</h1>
-    <br>
+    
     <!-- <ion-card class="dowload"> -->
       <!-- <ion-icon class="up" name="cloud-upload-outline"></ion-icon>
       <p class="tele">Télécharger un fichier</p> -->
       <!-- </ion-card>  -->
       <ion-input class="dowload" type="file"  (change)="recupereImage($event)" name="image">
       </ion-input>
-      <br> 
+      
       <p class="bas">Aider les autres en les diffusant sur votre site et les donnant de bon conseil dans le domaine de l'entreprenariat</p>
       
     <ion-button class="ajouter" color="primary" (click)="ajoutsite()">Ajouter</ion-button>

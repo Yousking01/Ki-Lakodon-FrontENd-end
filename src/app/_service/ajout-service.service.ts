@@ -8,9 +8,6 @@ import { TokenStorageService } from './token-storage.service';
   providedIn: 'root'
 })
 export class AjoutServiceService {
-  lireannonceparidannonceur() {
-    throw new Error('Method not implemented.');
-  }
 
   API_AJOUTANNONCE = "http://localhost:8080";
   httpOptions = {
@@ -142,9 +139,14 @@ export class AjoutServiceService {
 
 
   ////lister Annonce par l'id de l'annonceur
-  listeAnnonceByIdannonceur(id:number):Observable<any> {
+  listeAnnonceByIdannonceur(id:number): Observable<any> {
     return this.http.get(`http://localhost:8080/api/auth/annonce/lireannonceparidannonceur/${id}`);
   }
 
-
+  listeAnnonceurById(id:number): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/auth/annonceur/lireannonceurId/${id}`);
+  }
+  listeAnnonceById(idannonce:number): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/auth/annonce/lire/${idannonce}`);
+  }
 }

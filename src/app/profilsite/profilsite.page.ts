@@ -4,8 +4,8 @@ import { tap } from 'rxjs/operators';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { ChartConfiguration, ChartType, ChartData, ChartEvent } from 'chart.js';
-import { BaseChartDirective } from 'ng2-charts';
+// import { ChartConfiguration, ChartType, ChartData, ChartEvent } from 'chart.js';
+// import { BaseChartDirective } from 'ng2-charts';
 import { AjoutServiceService } from '../_service/ajout-service.service';
 import { AjoutsiteService } from '../_service/ajoutsite.service';
 import { AuthService } from '../_service/auth.service';
@@ -19,62 +19,62 @@ import { TokenStorageService } from '../_service/token-storage.service';
 })
 export class ProfilsitePage implements OnInit {
 
-  idsite:any
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
+  idsite:any;
+  // @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
   ListeSite: any;
   ListeAnnonce: any;
   site:any
-  public barChartOptions: ChartConfiguration['options'] = {
-    elements: {
-      line: {
-        tension: 0.4
-      }
-    },
-    // Nous utilisons ces structures vides comme espaces réservés pour la thématisation dynamique.
-    scales: {
-      x: {},
-      y: {
-        min: 0
-      }
-    },
-    plugins: {
-      legend: { display: true, 
-      // align:'top',
+  // public barChartOptions: ChartConfiguration['options'] = {
+  //   elements: {
+  //     line: {
+  //       tension: 0.4
+  //     }
+  //   },
+  //   // Nous utilisons ces structures vides comme espaces réservés pour la thématisation dynamique.
+  //   scales: {
+  //     x: {},
+  //     y: {
+  //       min: 0
+  //     }
+  //   },
+  //   plugins: {
+  //     legend: { display: true, 
+  //     // align:'top',
       
       
-    },
+  //   },
     
       
 
-    }
-  };
-  public barChartLabels: string[] = [ 'Lundi', 'Mardi', 'Mercrédi', 'Jeudi', 'Vendrédi', 'Samedi', 'Dimache' ];
-  public barChartType: ChartType = 'bar';
+  //   }
+  // };
+  // public barChartLabels: string[] = [ 'Lundi', 'Mardi', 'Mercrédi', 'Jeudi', 'Vendrédi', 'Samedi', 'Dimache' ];
+  // public barChartType: ChartType = 'bar';
   
 
-  public barChartData: ChartData<'bar'> = {
-    labels: this.barChartLabels,
-    datasets: [
-      { data: [ 25, 28, 62, 25, 95, 55,  ], label: 'Taux de Ventes', backgroundColor:'#29B6F6', borderRadius:8 },
-      // { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
-    ]
-  };
+  // public barChartData: ChartData<'bar'> = {
+  //   labels: this.barChartLabels,
+  //   datasets: [
+  //     { data: [ 25, 28, 62, 25, 95, 55,  ], label: 'Taux de Ventes', backgroundColor:'#29B6F6', borderRadius:8 },
+  //     // { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
+  //   ]
+  // };
   ListeSitebyId: any;
   annonceSite: any;
   ListeAnnonceByIdSite: any;
 
   // events
-  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
+  // public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
+  //   console.log(event, active);
+  // }
 
-  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
+  // public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
+  //   console.log(event, active);
+  // }
 
-  public randomize(): void {
-    this.barChartType = this.barChartType === 'bar' ? 'line' : 'bar';
-  }
+  // public randomize(): void {
+  //   this.barChartType = this.barChartType === 'bar' ? 'line' : 'bar';
+  // }
 
   constructor(private navCtrl: NavController, private http: HttpClient,private tokenStorage: TokenStorageService, private ajoutsiteService : AjoutsiteService, private ajoutService: AjoutServiceService, private router: Router, private route: ActivatedRoute,private authService: AuthService,  ) {
     

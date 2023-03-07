@@ -1,9 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
-import { BaseChartDirective } from 'ng2-charts';
+// import { BaseChartDirective } from 'ng2-charts';
+import { AjoutServiceService } from '../_service/ajout-service.service';
+import { AuthService } from '../_service/auth.service';
 import { TokenStorageService } from '../_service/token-storage.service';
+import { UserService } from '../_service/user.service';
 
 
 @Component({
@@ -13,65 +17,53 @@ import { TokenStorageService } from '../_service/token-storage.service';
 })
 export class ProfilannonceurPage implements OnInit {
 
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  public barChartOptions: ChartConfiguration['options'] = {
-    elements: {
-      line: {
-        tension: 0.4
-      }
-    },
-    // Nous utilisons ces structures vides comme espaces réservés pour la thématisation dynamique.
-    scales: {
-      x: {},
-      y: {
-        min: 0
-      }
-    },
-    plugins: {
-      legend: { display: true, 
-      // align:'top',
-      
-      
-    },
-    
-      
+  ///RECUPERATION DE LA LISTE ANNONCEUR
+  ListeAnnonceur: any;
+  id: any;
+  ListeAnnonceurbyId: any;
+  user: any;
+  listeuserbyId: any;
+  idannonce: any;
+  ListeSitebyId: any;
+  ListeannoncebyId: any;
 
-    }
-  };
-  public barChartLabels: string[] = [ 'Lundi', 'Mardi', 'Mercrédi', 'Jeudi', 'Vendrédi', 'Samedi', 'Dimache' ];
-  public barChartType: ChartType = 'bar';
-  
-
-  public barChartData: ChartData<'bar'> = {
-    labels: this.barChartLabels,
-    datasets: [
-      { data: [ 25, 28, 62, 25, 95, 55,  ], label: 'Taux de Ventes', backgroundColor:'#29B6F6', borderRadius:8 },
-      // { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
-    ]
-  };
-
-  // events
-  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public randomize(): void {
-    this.barChartType = this.barChartType === 'bar' ? 'line' : 'bar';
-  }
-
-  constructor(private router: Router, private route: ActivatedRoute , private tokenStorage: TokenStorageService, private http: HttpClient ) {
-    
+  constructor(private authService: AuthService,private ajouteservice : AjoutServiceService,public alertController: AlertController,private router: Router, private route: ActivatedRoute , private tokenStorage: TokenStorageService, private http: HttpClient,private userService: UserService ) {
+    // this.user = this.authService.getCurrentUser();
    }
  
 
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.idannonce = params['id'];
+      console.log("id du annonce===========",this.idannonce);
+
+      this.ajouteservice.listeAnnonceById(this.idannonce).subscribe(data =>{
+        console.log("objet trouvee========", this.idannonce);
+        this.ListeannoncebyId = data;
+      })
+    })
+
+    /////lister annonceur
+    this.ajouteservice.listAnnoncuer().subscribe(data =>{
+      this.ListeAnnonceur = data;
+      console.log(data);
+    });
+    /////:lister annonceur par id
+    //recuperation de l'id du site
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+      console.log("id du Ann===========", this.id);
+
+      this.ajouteservice.listeAnnonceurById(this.id).subscribe(data =>{      
+        console.log("objet Annonceur============", this.id);
+        this.ListeAnnonceurbyId = data;
+      });
+    });
+
   }
+  
    //reload Page
    reloadPage() {
     window.location.reload();

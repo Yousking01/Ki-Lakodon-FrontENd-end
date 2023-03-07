@@ -183,15 +183,18 @@ padding-left: 10px;
     padding: 5px;
   }
   .annonimg{
-    margin-top: 0px;
     display: flex;
-    width: 48%;
+    width: 100%;
     position: relative;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-right: 0px;
-    height: 172px;
 
+  }
+  .mage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
   }
   .crd{
     height: 100% !important;
@@ -204,7 +207,7 @@ padding-left: 10px;
   .bb2{
     text-align: center;
     font-size: 10px;
-    margin-right: 15px;
+    margin-right: 5px;
     margin-bottom: 0px;
   }
 

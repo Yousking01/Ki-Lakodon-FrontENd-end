@@ -34,6 +34,9 @@ export class AjoutSitePage implements OnInit {
     this.URL = '';
     // this.budgetannonce ='';
     this.image = '';
+    this.username= '';
+    this.email='';
+    this.password='';
     // this.dateDebut = '';
     // this.dateFin = '';
     // this.idannonceur = 0;

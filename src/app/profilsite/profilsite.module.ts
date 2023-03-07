@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProfilsitePageRoutingModule } from './profilsite-routing.module';
 
 import { ProfilsitePage } from './profilsite.page';
-import { NgChartsModule } from 'ng2-charts';
+// import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [

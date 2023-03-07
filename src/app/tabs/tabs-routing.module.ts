@@ -18,7 +18,7 @@ const routes: Routes = [
         // canLoad:[AuthGuardService]
       },
       {
-        path: 'profilannonceur',
+        path: 'profilannonceur/:id',
         loadChildren: () => import('../profilannonceur/profilannonceur.module').then( m => m.ProfilannonceurPageModule),
         // canLoad:[AuthGuardService]
       },
